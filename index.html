@@ -1,13 +1,76 @@
 <html><head>
 	<link rel="stylesheet" type="text/css" href="css/amtest.css" />
 	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/raphael-min.js"></script>
 	<script type="text/javascript" src="lib/questions.js"></script>
 	<script type="text/javascript">
+		function loadSVG(url, callback)
+		{
+			function parseStyle(str, transform)
+			{
+				var style = {};
+				if(str)
+				{
+					$.each(str.split(';'), function(idx, value)
+					{
+						var vals = value.split(':', 2);
+						style[vals[0]] = vals[1];
+					});
+					if(style['stroke-dasharray'] == 'none') delete style['stroke-dasharray'];
+					if(style['fill'] == 'none') delete style['fill'];
+					if(style['stroke'] == 'none') delete style['stroke'];
+				}
+				if(transform)
+				{
+//					debugger;
+					var match = /matrix\((.+)\)/.exec(transform);
+					if(match) style['transform'] = 'm'+match[1];
+				}
+				return style;
+			}
+			
+			$.ajax({
+				url:url,
+				dataType:'text xml',
+				success:function(xml)
+				{
+					debugger;
+					var titleObj = $(xml).find('svg');
+					var paper = Raphael(0, 0, Math.ceil(titleObj.attr('width')),
+						Math.ceil(titleObj.attr('height')));
+					$(titleObj).find("g").children("path").each(function()
+					{
+						var path = $(this).attr('d');
+						var style = parseStyle($(this).attr('style'), $(this).attr('transform'));
+						var c = paper.path(path);
+						if(style) c.attr(style);
+					});
+					$(titleObj).find("g").children("text").each(function()
+					{
+						var style = parseStyle($(this).attr('style'), $(this).attr('transform'));
+						var posY = $(this).attr('y');
+						if(style && style['font-size'])
+						{
+							var matches = /^(.+?)(px)?$/.exec(style['font-size']);
+							if(matches)
+							{
+								posY -= (matches[1] / 2);
+							}
+						}
+						var c = paper.text($(this).attr('x'), posY, $(this).text());
+						if(style) c.attr(style);
+						debugger;
+					});
+					callback(paper);
+				}
+			});
+		}
+/*		
 		$.ajax({
 			url:'tests/extra08.json',
-			success:function(text)
+			dataType:'json',
+			success:function(questions)
 			{
-				var questions = $.parseJSON(text);
 				var list = [];
 				for(var id in questions.questions)
 				{
@@ -20,7 +83,11 @@
 				(new QuestionList(qlBase, list)).showQuestion();
 				debugger;
 			}
+		});*/
+		loadSVG('tests/extra08-5-2.svg', function(paper)
+		{
 		});
+
 	</script>
 </head>
 <body>
