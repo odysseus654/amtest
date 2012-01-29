@@ -9,7 +9,6 @@ DIV.qouter
 DIV.qheader
 {
 	font-size: 12pt;
-	width: 100%;
 }
 
 SPAN.qid
@@ -30,55 +29,49 @@ DIV.qtitle
 	margin-bottom: 25px;
 }
 
-DIV.qtitle, DIV.anscover
+DIV.qtitle, DIV.anscover, DIV.qheader
 {
 	width: 100%;
 }
 
-DIV.ansrow
+TABLE.ansrow
 {
+	width: 100%;
 	border: 1px solid black;
 	margin-bottom: 15px;
 	font: 16pt Arial,sans-serif;
 }
 
-.hover DIV.ansinner
+.hover TR.ansinner
 {
 	background-color: lightgrey;
 }
 
-DIV.badAnswer DIV.ansinner
+TABLE.badAnswer TR.ansinner
 {
 	background-color: rgb(255, 128, 128);
 	cursor: auto;
 }
 
-DIV.goodAnswer DIV.ansinner
+TABLE.goodAnswer TR.ansinner
 {
 	background-color: rgb(128, 255, 128);
 	cursor: auto;
 }
 
-DIV.ansinner
+TR.ansinner
 {
 	cursor: pointer;
 }
 
-DIV.qleft
+TD.qleft
 {
 	border-right: 1px solid lightgrey;
 	width: 25px;
 	text-align: center;
-	float: left;
 }
 
-DIV.ansinner
+TABLE.ansrow TD
 {
-	width:100%;
-}
-
-DIV.qleft, DIV.qright
-{
-	display: inline-block;
 	padding: 10px;
 }

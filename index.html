@@ -1,177 +1,26 @@
 <html><head>
 	<link rel="stylesheet" type="text/css" href="css/amtest.css" />
 	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/questions.js"></script>
 	<script type="text/javascript">
-		function getQuestions(url, callback)
-		{
-			$.ajax({
-				url:'tests/'+url+'.json',
-				success:function(text)
+		$.ajax({
+			url:'tests/extra08.json',
+			success:function(text)
+			{
+				var questions = $.parseJSON(text);
+				var list = [];
+				for(var id in questions.questions)
 				{
-					var questions = $.parseJSON(text);
-					callback(questions);
+					var quest = questions.questions[id];
+					quest.id = id;
+					list.push(quest);
 				}
-			});
-		}
-
-		function curry(f, varargs)
-		{
-			var args = [].splice.call(arguments, 0);
-			args.shift();
-			return function()
-			{
-				f.apply(this, args.concat([].splice.call(arguments, 0)));
+				var qlBase = $('<div/>').css('width','100%');
+				$(document.body).append(qlBase);
+				(new QuestionList(qlBase, list)).showQuestion();
+				debugger;
 			}
-		}
-
-		function bind(obj, f, varargs)
-		{
-			var args = [].splice.call(arguments, 0);
-			args.splice(0, 2);
-			return function()
-			{
-				f.apply(obj, args.concat([].splice.call(arguments, 0)));
-			}
-		}
-		
-		function shuffle(num)
-		{
-			var results = [];
-			function swap(a,b)
-			{
-				var temp = results[a];
-				results[a] = results[b];
-				results[b] = temp;
-			}
-
-			var idx=0;
-			for(idx=0; idx < num; idx++) results[idx]=idx;
-			for(idx=0; idx < num-1; idx++)
-			{
-				var target = Math.random();
-				while(target == 1) target = Math.random();
-				target = Math.floor(target * (num - idx));
-				if(target) swap(idx, target+idx);
-			}
-			return results;
-		}
-
-		function createShadow(obj)
-		{
-			var clone = $(obj).clone()
-				.css({position:'absolute', width:$(obj).width()})
-				.css($(obj).offset());
-			$(document.body).append(clone);
-			$(obj).css('opacity', '0');
-			return clone;
-		}
-
-		function Question(qid, quest)
-		{
-			this.ID = qid;
-			this.question = quest;
-			this.domSpot = $('<div/>',{'class':'anscover'});
-		}
-		var QP = Question.prototype;
-		QP.domSpot = null;
-		QP.letters = 'ABCD';
-		QP.currentHover = null;
-		QP.hadBadAnswers = false;
-		
-		QP.onMouseMove = function(clsName)
-		{
-			if(this.currentHover != clsName)
-			{
-				if(this.currentHover)
-				{
-					$('DIV.'+this.currentHover, this.domSpot).removeClass('hover');
-				}
-				this.currentHover = clsName;
-				$('DIV.'+this.currentHover, this.domSpot).addClass('hover');
-			}
-		};
-
-		QP.onMouseLeave = function()
-		{
-			if(this.currentHover)
-			{
-				$('DIV.'+this.currentHover, this.domSpot).removeClass('hover');
-				this.currentHover = null;
-			}
-		};
-
-		QP.onClick = function(ansID, clsName)
-		{
-			var questRow = $('DIV.'+this.currentHover, this.domSpot);
-			if(ansID == this.question.c)
-			{
-				questRow.addClass('goodAnswer');
-				if(!this.hadBadAnswers) this.fadeOut($(this.domSpot).parents('DIV.qouter'), questRow);
-			}
-			else
-			{
-				questRow.addClass('badAnswer');
-				this.hadBadAnswers = true;
-			}
-		};
-
-		QP.fadeOut = function(obj, rightObj)
-		{
-			function destroyMe()
-			{
-				this.parentNode.removeChild(this);
-			}
-			
-			if(rightObj)
-			{
-				var rightClone = createShadow(rightObj);
-				rightClone.animate({opacity:0,top:'-=50'},
-					{duration:1000, easing:'linear', complete:destroyMe});
-			}
-			var mainClone = createShadow(obj);
-			$(mainClone).animate({opacity:0,left:'-=50'},{complete:destroyMe});
-		};
-
-		QP.buildQuestion = function()
-		{			
-			var questOrder = shuffle(4);
-			for(var idx=0; idx<4; idx++)
-			{
-				var letter = this.letters[idx];
-				var questRow = $('<div/>',{'class':'ansrow ans'+letter})
-						.append($('<div/>',{'class':'ansinner'})
-							.append($('<div/>',{'class':'qleft'}).append(letter))
-							.append($('<div/>',{'class':'qright'}).append(this.question.a[questOrder[idx]])));
-				questRow.on({
-					mousemove:	bind(this, this.onMouseMove, 'ans'+letter),
-					mouseout:	bind(this, this.onMouseLeave),
-					click:		bind(this, this.onClick, questOrder[idx], 'ans'+letter)
-				});
-				this.domSpot.append(questRow);
-			}
-			
-			var questHeader = $('<div/>',{'class':'qheader'})
-					.append($('<span/>',{'class':'qid'}).append(this.ID));
-			if(this.question.source)
-			{
-				questHeader.append($('<span/>',{'class':'qsrc'}).append(this.question.source));
-			}
-			
-			return $('<div/>',{'class':'qouter'})
-				.append(questHeader)
-				.append($('<div/>',{'class':'qtitle'}).append(this.question.q))
-				.append(this.domSpot);
-		};
-		getQuestions('extra08', function(questions)
-		{
-			for(var id in questions.questions)
-			{
-				$(document.body).append((new Question(id, questions.questions[id])).buildQuestion());
-				break;
-			}
-			debugger;
 		});
-		
 	</script>
 </head>
 <body>
