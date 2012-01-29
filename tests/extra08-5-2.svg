@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.74"
-     inkscape:cx="94.160974"
-     inkscape:cy="65.551244"
+     inkscape:zoom="1.79"
+     inkscape:cx="148.46717"
+     inkscape:cy="239.16857"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -54,77 +54,76 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,7.3299181)">
+     id="layer1">
     <path
        inkscape:connector-curvature="0"
        id="3"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 32.031496,288.6378 32.173228,182.09055" />
     <path
        inkscape:connector-curvature="0"
        id="4"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4;marker-start:none"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none"
        d="m 32.102362,48.543307 102.188978,0" />
     <path
        inkscape:connector-curvature="0"
        id="5"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 278.25591,48.649606 0.14173,123.555114" />
     <path
        inkscape:connector-curvature="0"
        id="6"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 278.18504,288.6378 -127.24016,0" />
     <path
        inkscape:connector-curvature="0"
        id="7"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 278.18504,248.70472 -127.24016,0.1063" />
     <path
        inkscape:connector-curvature="0"
        id="8"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 278.18504,208.66535 -127.24016,0" />
     <path
        inkscape:connector-curvature="0"
        id="9"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.25098041;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 294.69685,168.76772 -278.043307,0.1063" />
     <path
        inkscape:connector-curvature="0"
        id="10"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 278.18504,128.62205 -126.7441,0" />
     <path
        inkscape:connector-curvature="0"
        id="11"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 278.18504,88.511811 151.44094,88.61811" />
     <path
        inkscape:connector-curvature="0"
        id="12"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 73.275591,288.6378 0,-106.54725" />
     <path
        inkscape:connector-curvature="0"
        id="13"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 114.12992,288.6378 0.14173,-106.54725" />
     <path
        inkscape:connector-curvature="0"
        id="14"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 155.26772,300.54331 0,-264.047247" />
     <path
        inkscape:connector-curvature="0"
        id="15"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 196.15748,288.6378 0.14173,-106.54725" />
     <path
        inkscape:connector-curvature="0"
        id="16"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 237.40157,288.6378 0,-106.54725" />
     <text
        xml:space="preserve"
@@ -173,36 +172,36 @@
     <path
        inkscape:connector-curvature="0"
        id="31"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 151.33465,48.543307 126.99212,0" />
     <path
        inkscape:connector-curvature="0"
        id="32"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 134.14961,88.511811 32.208661,88.61811" />
     <path
        inkscape:connector-curvature="0"
        id="33"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 134.14961,128.62205 -101.940949,0" />
     <path
        inkscape:connector-curvature="0"
        id="34"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 128.69291,208.66535 -96.484249,0" />
     <path
        inkscape:connector-curvature="0"
        id="35"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 128.69291,248.70472 -96.484249,0.1063" />
     <path
        inkscape:connector-curvature="0"
        id="36"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 128.69291,288.6378 -96.484249,0" />
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="138.74023"
        y="50.75111"
        id="text5537"
@@ -211,10 +210,10 @@
          id="tspan5539"
          x="138.74023"
          y="50.75111"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">600</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">600</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="138.75288"
        y="70.270721"
        id="text5537-1"
@@ -223,10 +222,10 @@
          id="tspan5539-7"
          x="138.75288"
          y="70.270721"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">500</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">500</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="138.74115"
        y="90.559753"
        id="text5537-1-4"
@@ -235,10 +234,10 @@
          id="tspan5539-7-4"
          x="138.74115"
          y="90.559753"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">400</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">400</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="138.69626"
        y="111.24276"
        id="text5537-1-4-3"
@@ -247,10 +246,10 @@
          id="tspan5539-7-4-2"
          x="138.69626"
          y="111.24276"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">300</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">300</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="138.67403"
        y="130.34843"
        id="text5537-1-4-3-9"
@@ -259,10 +258,10 @@
          id="tspan5539-7-4-2-8"
          x="138.67403"
          y="130.34843"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">200</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">200</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="138.64647"
        y="150.3763"
        id="text5537-1-4-3-9-0"
@@ -271,10 +270,10 @@
          id="tspan5539-7-4-2-8-3"
          x="138.64647"
          y="150.3763"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">100</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">100</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="136.74609"
        y="190.5338"
        id="text5537-1-4-3-9-0-0-3"
@@ -283,10 +282,10 @@
          id="tspan5539-7-4-2-8-3-9-9"
          x="136.74609"
          y="190.5338"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-100</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-100</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="136.71796"
        y="209.99586"
        id="text5537-1-4-3-9-0-0-3-6"
@@ -295,10 +294,10 @@
          id="tspan5539-7-4-2-8-3-9-9-1"
          x="136.71796"
          y="209.99586"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-200</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-200</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="136.7836"
        y="230.54753"
        id="text5537-1-4-3-9-0-0-3-6-6"
@@ -307,10 +306,10 @@
          id="tspan5539-7-4-2-8-3-9-9-1-9"
          x="136.7836"
          y="230.54753"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-300</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-300</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="136.78362"
        y="250.63811"
        id="text5537-1-4-3-9-0-0-3-6-6-2"
@@ -319,10 +318,10 @@
          id="tspan5539-7-4-2-8-3-9-9-1-9-9"
          x="136.78362"
          y="250.63811"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-400</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-400</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="136.7836"
        y="271.05994"
        id="text5537-1-4-3-9-0-0-3-6-6-2-6"
@@ -331,10 +330,10 @@
          id="tspan5539-7-4-2-8-3-9-9-1-9-9-9"
          x="136.7836"
          y="271.05994"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-500</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-500</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="136.84924"
        y="290.56104"
        id="text5537-1-4-3-9-0-0-3-6-6-2-6-0"
@@ -343,10 +342,10 @@
          id="tspan5539-7-4-2-8-3-9-9-1-9-9-9-6"
          x="136.84924"
          y="290.56104"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-600</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-600</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="26.342958"
        y="179.39816"
        id="text5537-1-4-3-9-0-0-9-1-2-2-1"
@@ -355,10 +354,10 @@
          id="tspan5539-7-4-2-8-3-9-5-7-6-4-0"
          x="26.342958"
          y="179.39816"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-600</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-600</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="46.828976"
        y="179.33249"
        id="text5537-1-4-3-9-0-0-9-1-2-2"
@@ -367,10 +366,10 @@
          id="tspan5539-7-4-2-8-3-9-5-7-6-4"
          x="46.828976"
          y="179.33249"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-500</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-500</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="67.314987"
        y="179.33102"
        id="text5537-1-4-3-9-0-0-9-1-2"
@@ -379,10 +378,10 @@
          id="tspan5539-7-4-2-8-3-9-5-7-6"
          x="67.314987"
          y="179.33102"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-400</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-400</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="87.866661"
        y="179.46382"
        id="text5537-1-4-3-9-0-0-9-1"
@@ -391,10 +390,10 @@
          id="tspan5539-7-4-2-8-3-9-5-7"
          x="87.866661"
          y="179.46382"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-300</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-300</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="108.35268"
        y="179.46381"
        id="text5537-1-4-3-9-0-0-9"
@@ -403,10 +402,10 @@
          id="tspan5539-7-4-2-8-3-9-5"
          x="108.35268"
          y="179.46381"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-200</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-200</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="128.82127"
        y="179.3325"
        id="text5537-1-4-3-9-0-0"
@@ -415,10 +414,10 @@
          id="tspan5539-7-4-2-8-3-9"
          x="128.82127"
          y="179.3325"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-100</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">-100</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="170.74631"
        y="179.43063"
        id="text5537-1-4-3-9-0-0-8"
@@ -427,10 +426,10 @@
          id="tspan5539-7-4-2-8-3-9-1"
          x="170.74631"
          y="179.43063"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">100</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">100</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="191.19858"
        y="179.39816"
        id="text5537-1-4-3-9-0-0-8-6"
@@ -439,10 +438,10 @@
          id="tspan5539-7-4-2-8-3-9-1-8"
          x="191.19858"
          y="179.39816"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">200</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">200</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="211.72639"
        y="179.39815"
        id="text5537-1-4-3-9-0-0-8-6-7"
@@ -451,10 +450,10 @@
          id="tspan5539-7-4-2-8-3-9-1-8-8"
          x="211.72639"
          y="179.39815"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">300</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">300</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="232.23997"
        y="179.3967"
        id="text5537-1-4-3-9-0-0-8-6-7-8"
@@ -463,10 +462,10 @@
          id="tspan5539-7-4-2-8-3-9-1-8-8-7"
          x="232.23997"
          y="179.3967"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">400</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">400</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="252.74823"
        y="179.33249"
        id="text5537-1-4-3-9-0-0-8-6-7-8-8"
@@ -475,10 +474,10 @@
          id="tspan5539-7-4-2-8-3-9-1-8-8-7-6"
          x="252.74823"
          y="179.33249"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">500</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">500</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="273.21344"
        y="179.39816"
        id="text5537-1-4-3-9-0-0-8-6-7-8-8-8"
@@ -487,36 +486,36 @@
          id="tspan5539-7-4-2-8-3-9-1-8-8-7-6-0"
          x="273.21344"
          y="179.39816"
-         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">600</tspan></text>
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial">600</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="221"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 237.40157,172.20472 0,-123.555114" />
     <path
        inkscape:connector-curvature="0"
        id="222"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 196.15748,172.20472 196.29921,48.649606" />
     <path
        inkscape:connector-curvature="0"
        id="223"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 278.25591,182.09055 0.14173,106.54725" />
     <path
        inkscape:connector-curvature="0"
        id="224"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 32.031496,172.20472 32.173228,48.649606" />
     <path
        inkscape:connector-curvature="0"
        id="225"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 73.275591,172.20472 0,-123.555114" />
     <path
        inkscape:connector-curvature="0"
        id="226"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.24705882;stroke-dasharray:none;stroke-miterlimit:4"
+       style="fill:none;stroke:#bfbfbf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 114.12992,172.20472 114.27165,48.649606" />
     <path
        sodipodi:type="arc"
@@ -525,7 +524,7 @@
        sodipodi:cy="170.88437"
        sodipodi:rx="1.6398761"
        sodipodi:ry="1.6398761"
-       d="m 212.22259,170.88437 c 0,0.90568 -0.73419,1.63988 -1.63987,1.63988 -0.90568,0 -1.63988,-0.7342 -1.63988,-1.63988 0,-0.90568 0.7342,-1.63988 1.63988,-1.63988 0.90568,0 1.63987,0.7342 1.63987,1.63988 z"
+       d="m 212.22259,170.88437 a 1.6398761,1.6398761 0 1 1 -3.27975,0 1.6398761,1.6398761 0 1 1 3.27975,0 z"
        transform="matrix(1.0517241,0,0,1.0517241,-127.69027,68.932071)"
        style="fill:#000000;fill-opacity:1" />
     <path
@@ -535,7 +534,7 @@
        sodipodi:cy="170.88437"
        sodipodi:rx="1.6398761"
        sodipodi:ry="1.6398761"
-       d="m 212.22259,170.88437 c 0,0.90568 -0.73419,1.63988 -1.63987,1.63988 -0.90568,0 -1.63988,-0.7342 -1.63988,-1.63988 0,-0.90568 0.7342,-1.63988 1.63988,-1.63988 0.90568,0 1.63987,0.7342 1.63987,1.63988 z"
+       d="m 212.22259,170.88437 a 1.6398761,1.6398761 0 1 1 -3.27975,0 1.6398761,1.6398761 0 1 1 3.27975,0 z"
        transform="matrix(1.0517241,0,0,1.0517241,-148.32815,48.931951)"
        style="fill:#000000;fill-opacity:1" />
     <path
@@ -545,7 +544,7 @@
        sodipodi:cy="170.88437"
        sodipodi:rx="1.6398761"
        sodipodi:ry="1.6398761"
-       d="m 212.22259,170.88437 c 0,0.90568 -0.73419,1.63988 -1.63987,1.63988 -0.90568,0 -1.63988,-0.7342 -1.63988,-1.63988 0,-0.90568 0.7342,-1.63988 1.63988,-1.63988 0.90568,0 1.63987,0.7342 1.63987,1.63988 z"
+       d="m 212.22259,170.88437 a 1.6398761,1.6398761 0 1 1 -3.27975,0 1.6398761,1.6398761 0 1 1 3.27975,0 z"
        transform="matrix(1.0517241,0,0,1.0517241,-4.7817497,68.98651)"
        style="fill:#000000;fill-opacity:1" />
     <path
@@ -555,7 +554,7 @@
        sodipodi:cy="170.88437"
        sodipodi:rx="1.6398761"
        sodipodi:ry="1.6398761"
-       d="m 212.22259,170.88437 c 0,0.90568 -0.73419,1.63988 -1.63987,1.63988 -0.90568,0 -1.63988,-0.7342 -1.63988,-1.63988 0,-0.90568 0.7342,-1.63988 1.63988,-1.63988 0.90568,0 1.63987,0.7342 1.63987,1.63988 z"
+       d="m 212.22259,170.88437 a 1.6398761,1.6398761 0 1 1 -3.27975,0 1.6398761,1.6398761 0 1 1 3.27975,0 z"
        transform="matrix(1.0517241,0,0,1.0517241,15.839093,48.883037)"
        style="fill:#000000;fill-opacity:1" />
     <path
@@ -565,7 +564,7 @@
        sodipodi:cy="170.88437"
        sodipodi:rx="1.6398761"
        sodipodi:ry="1.6398761"
-       d="m 212.22259,170.88437 c 0,0.90568 -0.73419,1.63988 -1.63987,1.63988 -0.90568,0 -1.63988,-0.7342 -1.63988,-1.63988 0,-0.90568 0.7342,-1.63988 1.63988,-1.63988 0.90568,0 1.63987,0.7342 1.63987,1.63988 z"
+       d="m 212.22259,170.88437 a 1.6398761,1.6398761 0 1 1 -3.27975,0 1.6398761,1.6398761 0 1 1 3.27975,0 z"
        transform="matrix(1.0517241,0,0,1.0517241,15.764592,-70.818239)"
        style="fill:#000000;fill-opacity:1" />
     <path
@@ -575,7 +574,7 @@
        sodipodi:cy="170.88437"
        sodipodi:rx="1.6398761"
        sodipodi:ry="1.6398761"
-       d="m 212.22259,170.88437 c 0,0.90568 -0.73419,1.63988 -1.63987,1.63988 -0.90568,0 -1.63988,-0.7342 -1.63988,-1.63988 0,-0.90568 0.7342,-1.63988 1.63988,-1.63988 0.90568,0 1.63987,0.7342 1.63987,1.63988 z"
+       d="m 212.22259,170.88437 a 1.6398761,1.6398761 0 1 1 -3.27975,0 1.6398761,1.6398761 0 1 1 3.27975,0 z"
        transform="matrix(1.0517241,0,0,1.0517241,-4.8294384,-91.046739)"
        style="fill:#000000;fill-opacity:1" />
     <path
@@ -585,7 +584,7 @@
        sodipodi:cy="170.88437"
        sodipodi:rx="1.6398761"
        sodipodi:ry="1.6398761"
-       d="m 212.22259,170.88437 c 0,0.90568 -0.73419,1.63988 -1.63987,1.63988 -0.90568,0 -1.63988,-0.7342 -1.63988,-1.63988 0,-0.90568 0.7342,-1.63988 1.63988,-1.63988 0.90568,0 1.63987,0.7342 1.63987,1.63988 z"
+       d="m 212.22259,170.88437 a 1.6398761,1.6398761 0 1 1 -3.27975,0 1.6398761,1.6398761 0 1 1 3.27975,0 z"
        transform="matrix(1.0517241,0,0,1.0517241,-4.8133587,-17.384535)"
        style="fill:#000000;fill-opacity:1" />
     <path
@@ -595,7 +594,7 @@
        sodipodi:cy="170.88437"
        sodipodi:rx="1.6398761"
        sodipodi:ry="1.6398761"
-       d="m 212.22259,170.88437 c 0,0.90568 -0.73419,1.63988 -1.63987,1.63988 -0.90568,0 -1.63988,-0.7342 -1.63988,-1.63988 0,-0.90568 0.7342,-1.63988 1.63988,-1.63988 0.90568,0 1.63987,0.7342 1.63987,1.63988 z"
+       d="m 212.22259,170.88437 a 1.6398761,1.6398761 0 1 1 -3.27975,0 1.6398761,1.6398761 0 1 1 3.27975,0 z"
        transform="matrix(1.0517241,0,0,1.0517241,15.731166,-8.7543717)"
        style="fill:#000000;fill-opacity:1" />
     <text
