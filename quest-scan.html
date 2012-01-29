@@ -1,0 +1,114 @@
+<html><head>
+	<script type="text/javascript" src="lib/json2.js"></script>
+	<script type="text/javascript" src="lib/sarissa.js"></script>
+	<script type="text/javascript" src="lib/dynamic.js"></script>
+	<script type="text/javascript">
+		function trim(str)
+		{
+			return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+		}
+		function getText(url, callback)
+		{
+			new AjaxQuery({url:url},function(xmlhttp)
+			{
+				if(xmlhttp.readyState == 4)
+				{
+					callback(xmlhttp.responseText);
+				}
+			});
+		}
+		function getQuestions(callback)
+		{
+			getText('extra08-quest.txt', function(text)
+			{
+				var re = /^\x0c?(E[0-9][A-Z][0-9][0-9]) *\(([ABCD])\)( *\[([^\]]+)\])? *(.*)$([^\~]*)^A\. *([^\~]+)$[^\~]*B\. *([^\~]+)$[^\~]*C\. *([^\~]+)$[^\~]*D\. *([^\~]+)$/mg;
+				var questions = {};
+				var match;
+				while(match = re.exec(text))
+				{
+					var quest = {
+						c: 'ABCD'.indexOf(match[2]),
+						q: trim(match[6]),
+						a: [ trim(match[7]), trim(match[8]), trim(match[9]), trim(match[10]) ]
+					};
+					var source = match[4] || null;
+					var note = match[5] || null;
+					if(!note && source && !/^[0-9]/.test(source))
+					{
+						note = source;
+						source = null;
+					}
+					if(note)
+					{
+						var noteClean = /^[\[\(\{]*(.+?)[\]\)\}]*$/.exec(trim(note));
+						if(noteClean) note=noteClean[1];
+					}
+					if(source) quest.source = source;
+					if(note) quest.note = note;
+					questions[match[1]] = quest;
+				}
+				questions.E5C19.fig = questions.E5C20.fig = questions.E5C21.fig = questions.E5C23.fig = '5-2';
+				questions.E6A07.fig = '6-1';
+				questions.E6A10.fig = questions.E6A11.fig = '6-2';
+				questions.E6B06.fig = questions.E6B11.fig = '6-3';
+				questions.E6C07.fig = questions.E6C08.fig = questions.E6C09.fig = '6-5';
+				questions.E6C10.fig = questions.E6C11.fig = '6-5';
+				questions.E7B09.fig = questions.E7B10.fig = questions.E7B11.fig = '7-1';
+				questions.E7B12.fig = questions.E7B13.fig = '7-2';
+				questions.E7D06.fig = questions.E7D07.fig = questions.E7D08.fig = '7-3';
+				questions.E7D09.fig = questions.E7D10.fig = questions.E7D11.fig = '7-3';
+				questions.E7D12.fig = questions.E7D13.fig = '7-3';
+				questions.E7G09.fig = questions.E7G11.fig = questions.E7G12.fig = '7-4';
+				questions.E7G13.fig = '7-4';
+				questions.E9B02.fig = questions.E9B03.fig = questions.E9B04.fig = '9-1';
+				questions.E9C08.fig = questions.E9C09.fig = questions.E9C10.fig = '9-2';
+				questions.E9C11.fig = '9-2';
+				questions.E9G05.fig = questions.E9G06.fig = questions.E9G07.fig = '9-3';
+				callback(questions);
+			});
+		}
+		function getHeaders(questions, callback)
+		{
+			var headers = {};
+			for(var id in questions)
+			{
+				headers[id.substring(0,2)] = null;
+				headers[id.substring(0,3)] = null;
+			}
+			getText('extra08-sec.txt', function(text)
+			{
+				var re = /^SUBELEMENT (E.) -+ ([^\[]+)\[/mg;
+				var match;
+				while(match = re.exec(text))
+				{
+					headers[match[1]] = trim(match[2]);
+				}
+
+				re = /^(E..) (.+)$/mg;
+				while(match = re.exec(text))
+				{
+					headers[match[1]] = trim(match[2]);
+				}
+
+				callback(headers);
+			});
+		}
+		getQuestions(function(questions)
+		{
+			getHeaders(questions, function(headers)
+			{
+				var idx = 0;
+				for(var id in questions)
+				{
+					var q = questions[id];
+					idx++;
+				}
+				document.write(idx + ' questions found<br>');
+				document.write(JSON.stringify({title:'2008-2012 Amateur Radio Extra Element 4 Exam', headers:headers,questions:questions}));
+			});
+		});
+	</script>
+</head>
+<body onload="getText">
+</body>
+</html>

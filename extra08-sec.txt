@@ -1,0 +1,144 @@
+ELEMENT 4 - EXTRA CLASS QUESTION POOL 
+
+Valid July 1, 2008 through June 30, 2012 
+
+SYLLABUS
+
+SUBELEMENT E1 -- COMMISSION'S RULES [6 Exam Questions -- 6 Groups]
+
+E1A Operating Standards: frequency privileges for Extra Class amateurs; emission standards; automatic message forwarding; frequency sharing; FCC license actions; stations aboard ships or aircraft 
+
+E1B Station restrictions and special operations: restrictions on station location; general operating restrictions, spurious emissions, control operator reimbursement; antenna structure restrictions; RACES operations
+
+E1C Station control: definitions and restrictions pertaining to local, automatic and remote control operation; control operator responsibilities for remote and automatically controlled stations
+
+E1D Amateur Satellite service: definitions and purpose; license requirements for space stations; available frequencies and bands; telecommand and telemetry operations; restrictions, and special provisions; notification requirements
+
+E1E Volunteer examiner program: definitions, qualifications, preparation and administration of exams; accreditation; question pools; documentation requirements
+
+E1F Miscellaneous rules: external RF power amplifiers; Line A; national quiet zone; business communications; compensated communications; spread spectrum; auxiliary stations; reciprocal operating privileges; IARP and CEPT licenses; third party communications with foreign countries; special temporary authority
+
+
+
+SUBELEMENT E2 -- OPERATING PRACTICES AND PROCEDURES [5 Exam Questions -- 5 Groups]
+
+E2A Amateur radio in space: amateur satellites; orbital mechanics; frequencies and modes; satellite hardware; satellite operations
+
+E2B Television practices: fast scan television standards and techniques; slow scan television standards and techniques
+
+E2C Operating methods, part 1: contest and DX operating; spread-spectrum transmissions; automatic HF forwarding; selecting an operating frequency
+
+E2D Operating methods, part 2: VHF and UHF digital modes; packet clusters; Automatic Position Reporting System (APRS)  
+
+E2E Operating methods, part 3: operating HF digital modes; error correction
+
+
+
+SUBELEMENT E3 -- RADIO WAVE PROPAGATION [3 Exam Questions -- 3 Groups]
+ 
+E3A Propagation and technique, part 1: Earth-Moon-Earth communications; meteor scatter
+
+E3B Propagation and technique, part 2: transequatorial; long path; gray line; multi-path propagation
+
+E3C Propagation and technique, part 3: Auroral propagation; selective fading; radio-path horizon; take-off angle over flat or sloping terrain; earth effects on propagation; less common propagation modes
+
+
+
+SUBELEMENT E4 -- AMATEUR RADIO TECHNOLOGY AND MEASUREMENTS [5 Exam Questions -- 5 Groups]
+
+E4A Test equipment: analog and digital instruments; spectrum and network analyzers, antenna analyzers; oscilloscopes; testing transistors; RF measurements 
+
+E4B Measurement technique and limitations: instrument accuracy and performance limitations; probes; techniques to minimize errors; measurement of "Q"; instrument calibration
+
+E4C Receiver performance characteristics, part 1: phase noise, capture effect, noise floor, image rejection, MDS, signal-to-noise-ratio; selectivity
+
+E4D Receiver performance characteristics, part 2: blocking dynamic range, intermodulation and cross-modulation interference; 3rd order intercept; desensitization; preselection
+
+E4E Noise suppression: system noise; electrical appliance noise; line noise; locating noise sources; DSP noise reduction; noise blankers
+
+
+
+SUBELEMENT E5 -- ELECTRICAL PRINCIPLES [4 Exam Questions -- 4 Groups]
+ 
+E5A Resonance and Q: characteristics of resonant circuits: series and parallel resonance; Q; half-power bandwidth; phase relationships in reactive circuits
+
+E5B Time constants and phase relationships: R/L/C time constants: definition; time constants in RL and RC circuits; phase angle between voltage and current; phase angles of series and parallel circuits
+
+E5C Impedance plots and coordinate systems: plotting impedances in polar coordinates; rectangular coordinates
+
+E5D AC and RF energy in real circuits: skin effect; electrostatic and electromagnetic fields; reactive power; power factor; coordinate systems
+
+
+
+SUBELEMENT E6 -- CIRCUIT COMPONENTS [6 Exam Questions -- 6 Groups]
+
+E6A Semiconductor materials and devices: semiconductor materials (germanium, silicon, P-type, N-type); transistor types: NPN, PNP, junction, power; field-effect transistors: enhancement mode; depletion mode; MOS; CMOS; N-channel; P-channel
+
+E6B Semiconductor diodes
+
+E6C Integrated circuits: TTL digital integrated circuits; CMOS digital integrated circuits; gates
+
+E6D Optical devices and toroids: vidicon and cathode-ray tube devices; charge-coupled devices (CCDs); liquid crystal displays (LCDs); toroids: permeability, core material, selecting, winding
+
+E6E Piezoelectric crystals and MMICS: quartz crystals (as used in oscillators and filters); monolithic amplifiers (MMICs)
+
+E6F Optical components and power systems: photoconductive principles and effects, photovoltaic systems, optical couplers, optical sensors, and optoisolators 
+
+
+
+SUBELEMENT E7 -- PRACTICAL CIRCUITS [8 Exam Questions -- 8 Groups]
+
+E7A Digital circuits: digital circuit principles and logic circuits: classes of logic elements; positive and negative logic; frequency dividers; truth tables
+
+E7B Amplifiers: Class of operation; vacuum tube and solid-state circuits; distortion and intermodulation; spurious and parasitic suppression; microwave amplifiers
+
+E7C Filters and matching networks: filters and impedance matching networks: types of networks; types of filters; filter applications; filter characteristics; impedance matching; DSP filtering 
+
+E7D Power supplies and voltage regulators
+ 
+E7E Modulation and demodulation: reactance, phase and balanced modulators; detectors; mixer stages; DSP modulation and demodulation; software defined radio systems 
+
+E7F Frequency markers and counters: frequency divider circuits; frequency marker generators; frequency counters
+
+E7G Active filters and op-amps: active audio filters; characteristics; basic circuit design; operational amplifiers
+
+E7H Oscillators and signal sources: types of oscillators; 
+synthesizers and phase-locked loops; direct digital synthesizers
+
+
+
+SUBELEMENT E8 -- SIGNALS AND EMISSIONS [4 Exam Questions -- 4 Groups]
+ 
+E8A AC waveforms: sine, square, sawtooth and irregular waveforms; AC measurements; average and PEP of RF signals; pulse and digital signal waveforms 
+
+E8B Modulation and demodulation: modulation methods; modulation index and deviation ratio; pulse modulation; frequency and time division multiplexing
+
+E8C Digital signals: digital communications modes; CW; information rate vs. bandwidth; spread-spectrum communications; modulation methods
+
+E8D Waves, measurements, and RF grounding: peak-to-peak values, polarization; RF grounding
+
+
+
+SUBELEMENT E9 -- ANTENNAS AND TRANSMISSION LINES [8 Exam Questions -- 8 Groups]
+
+E9A Isotropic and gain antennas: definition; used as a standard for comparison; radiation pattern; basic antenna parameters: radiation resistance and reactance, gain, beamwidth, efficiency
+
+E9B Antenna patterns: E and H plane patterns; gain as a function of pattern; antenna design (computer modeling of antennas); Yagi antennas
+
+E9C Wire and phased vertical antennas: beverage antennas; terminated and resonant rhombic antennas; elevation above real ground; ground effects as related to polarization; take-off angles
+
+E9D Directional antennas: gain; satellite antennas; antenna beamwidth; losses; SWR bandwidth; antenna efficiency; shortened and mobile antennas; grounding
+
+E9E Matching: matching antennas to feed lines; power dividers
+
+E9F Transmission lines: characteristics of open and shorted feed lines: 1/8 wavelength; 1/4 wavelength; 1/2 wavelength; feed lines: coax versus open-wire; velocity factor; electrical length; transformation characteristics of line terminated in impedance not equal to characteristic impedance 
+
+E9G The Smith chart
+
+E9H  Effective radiated power; system gains and losses; radio direction finding antennas
+
+
+
+SUBELEMENT E0 - Safety [1 exam question -– 1 group]
+
+E0A Safety: amateur radio safety practices; RF radiation hazards; hazardous materials 

@@ -1,0 +1,84 @@
+DIV.qouter
+{
+	font: 16pt Arial,sans-serif;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+DIV.qheader
+{
+	font-size: 12pt;
+	width: 100%;
+}
+
+SPAN.qid
+{
+	color: grey;
+	font-weight: bold;
+}
+
+SPAN.qsrc
+{
+	float: right;
+}
+
+DIV.qtitle
+{
+	clear: both;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+DIV.qtitle, DIV.anscover
+{
+	width: 100%;
+}
+
+DIV.ansrow
+{
+	border: 1px solid black;
+	margin-bottom: 15px;
+	font: 16pt Arial,sans-serif;
+}
+
+.hover DIV.ansinner
+{
+	background-color: lightgrey;
+}
+
+DIV.badAnswer DIV.ansinner
+{
+	background-color: rgb(255, 128, 128);
+	cursor: auto;
+}
+
+DIV.goodAnswer DIV.ansinner
+{
+	background-color: rgb(128, 255, 128);
+	cursor: auto;
+}
+
+DIV.ansinner
+{
+	cursor: pointer;
+}
+
+DIV.qleft
+{
+	border-right: 1px solid lightgrey;
+	width: 25px;
+	text-align: center;
+	float: left;
+}
+
+DIV.ansinner
+{
+	width:100%;
+}
+
+DIV.qleft, DIV.qright
+{
+	display: inline-block;
+	padding: 10px;
+}
