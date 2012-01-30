@@ -41,12 +41,15 @@
 					$(titleObj).find("g").children("path").each(function()
 					{
 						var path = $(this).attr('d');
+						var id = $(this).attr('id');
 						var style = parseStyle($(this).attr('style'), $(this).attr('transform'));
+						debugger;
 						var c = paper.path(path);
 						if(style) c.attr(style);
 					});
 					$(titleObj).find("g").children("text").each(function()
 					{
+						var id = $(this).attr('id');
 						var style = parseStyle($(this).attr('style'), $(this).attr('transform'));
 						var posY = $(this).attr('y');
 						if(style && style['font-size'])
@@ -58,6 +61,14 @@
 							}
 						}
 						var c = paper.text($(this).attr('x'), posY, $(this).text());
+						if(style) c.attr(style);
+						debugger;
+					});
+					$(titleObj).find("g").children("circle").each(function()
+					{
+						var id = $(this).attr('id');
+						var style = parseStyle($(this).attr('style'), $(this).attr('transform'));
+						var c = paper.circle($(this).attr('cx'), $(this).attr('cy'), $(this).attr('r'));
 						if(style) c.attr(style);
 						debugger;
 					});
@@ -84,7 +95,7 @@
 				debugger;
 			}
 		});*/
-		loadSVG('tests/extra08-6-2.svg', function(paper)
+		loadSVG('tests/extra08-6-5.svg', function(paper)
 		{
 		});
 
