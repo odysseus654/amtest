@@ -138,27 +138,31 @@
 				}
 			});
 		}
-/*		
-		$.ajax({
-			url:'tests/extra08.json',
-			dataType:'json',
-			success:function(questions)
-			{
-				var list = [];
-				for(var id in questions.questions)
-				{
-					var quest = questions.questions[id];
-					quest.id = id;
-					list.push(quest);
-				}
-				var qlBase = $('<div/>').css('width','100%');
-				$(document.body).append(qlBase);
-				(new QuestionList(qlBase, list)).showQuestion();
-				debugger;
-			}
-		});*/
-		loadSVG('tests/extra08-7-1.svg', function(paper)
+		
+		$(document).ready(function()
 		{
+			/*
+			$.ajax({
+				url:'tests/extra08.json',
+				dataType:'json',
+				success:function(questions)
+				{
+					var list = [];
+					for(var id in questions.questions)
+					{
+						var quest = questions.questions[id];
+						quest.id = id;
+						list.push(quest);
+					}
+					var qlBase = $('<div/>').css('width','100%');
+					$(document.body).append(qlBase);
+					(new QuestionList(qlBase, list)).showQuestion();
+					debugger;
+				}
+			});*/
+			loadSVG('tests/extra08-9-2.svg', function(paper)
+			{
+			});
 		});
 
 	</script>
