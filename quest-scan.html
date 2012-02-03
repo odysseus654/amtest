@@ -1,70 +1,64 @@
 <html><head>
+	<script type="text/javascript" src="lib/jquery.js"></script>
 	<script type="text/javascript" src="lib/json2.js"></script>
-	<script type="text/javascript" src="lib/sarissa.js"></script>
-	<script type="text/javascript" src="lib/dynamic.js"></script>
 	<script type="text/javascript">
 		function trim(str)
 		{
 			return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 		}
-		function getText(url, callback)
-		{
-			new AjaxQuery({url:url},function(xmlhttp)
-			{
-				if(xmlhttp.readyState == 4)
-				{
-					callback(xmlhttp.responseText);
-				}
-			});
-		}
+
 		function getQuestions(callback)
 		{
-			getText('extra08-quest.txt', function(text)
-			{
-				var re = /^\x0c?(E[0-9][A-Z][0-9][0-9]) *\(([ABCD])\)( *\[([^\]]+)\])? *(.*)$([^\~]*)^A\. *([^\~]+)$[^\~]*B\. *([^\~]+)$[^\~]*C\. *([^\~]+)$[^\~]*D\. *([^\~]+)$/mg;
-				var questions = {};
-				var match;
-				while(match = re.exec(text))
+			$.ajax({
+				url:'build/extra08-quest.txt',
+				dataType:'text',
+				success:function(text)
 				{
-					var quest = {
-						c: 'ABCD'.indexOf(match[2]),
-						q: trim(match[6]),
-						a: [ trim(match[7]), trim(match[8]), trim(match[9]), trim(match[10]) ]
-					};
-					var source = match[4] || null;
-					var note = match[5] || null;
-					if(!note && source && !/^[0-9]/.test(source))
+					var re = /^\x0c?(E[0-9][A-Z][0-9][0-9]) *\(([ABCD])\)( *\[([^\]]+)\])? *(.*)$([^\~]*)^A\. *([^\~]+)$[^\~]*B\. *([^\~]+)$[^\~]*C\. *([^\~]+)$[^\~]*D\. *([^\~]+)$/mg;
+					var questions = {};
+					var match;
+					while(match = re.exec(text))
 					{
-						note = source;
-						source = null;
+						var quest = {
+							c: 'ABCD'.indexOf(match[2]),
+							q: trim(match[6]),
+							a: [ trim(match[7]), trim(match[8]), trim(match[9]), trim(match[10]) ]
+						};
+						var source = match[4] || null;
+						var note = match[5] || null;
+						if(!note && source && !/^[0-9]/.test(source))
+						{
+							note = source;
+							source = null;
+						}
+						if(note)
+						{
+							var noteClean = /^[\[\(\{]*(.+?)[\]\)\}]*$/.exec(trim(note));
+							if(noteClean) note=noteClean[1];
+						}
+						if(source) quest.source = source;
+						if(note) quest.note = note;
+						questions[match[1]] = quest;
 					}
-					if(note)
-					{
-						var noteClean = /^[\[\(\{]*(.+?)[\]\)\}]*$/.exec(trim(note));
-						if(noteClean) note=noteClean[1];
-					}
-					if(source) quest.source = source;
-					if(note) quest.note = note;
-					questions[match[1]] = quest;
+					questions.E5C19.fig = questions.E5C20.fig = questions.E5C21.fig = questions.E5C23.fig = '5-2';
+					questions.E6A07.fig = '6-1';
+					questions.E6A10.fig = questions.E6A11.fig = '6-2';
+					questions.E6B06.fig = questions.E6B11.fig = '6-3';
+					questions.E6C07.fig = questions.E6C08.fig = questions.E6C09.fig = '6-5';
+					questions.E6C10.fig = questions.E6C11.fig = '6-5';
+					questions.E7B09.fig = questions.E7B10.fig = questions.E7B11.fig = '7-1';
+					questions.E7B12.fig = questions.E7B13.fig = '7-2';
+					questions.E7D06.fig = questions.E7D07.fig = questions.E7D08.fig = '7-3';
+					questions.E7D09.fig = questions.E7D10.fig = questions.E7D11.fig = '7-3';
+					questions.E7D12.fig = questions.E7D13.fig = '7-3';
+					questions.E7G09.fig = questions.E7G11.fig = questions.E7G12.fig = '7-4';
+					questions.E7G13.fig = '7-4';
+					questions.E9B02.fig = questions.E9B03.fig = questions.E9B04.fig = '9-1';
+					questions.E9C08.fig = questions.E9C09.fig = questions.E9C10.fig = '9-2';
+					questions.E9C11.fig = '9-2';
+					questions.E9G05.fig = questions.E9G06.fig = questions.E9G07.fig = '9-3';
+					callback(questions);
 				}
-				questions.E5C19.fig = questions.E5C20.fig = questions.E5C21.fig = questions.E5C23.fig = '5-2';
-				questions.E6A07.fig = '6-1';
-				questions.E6A10.fig = questions.E6A11.fig = '6-2';
-				questions.E6B06.fig = questions.E6B11.fig = '6-3';
-				questions.E6C07.fig = questions.E6C08.fig = questions.E6C09.fig = '6-5';
-				questions.E6C10.fig = questions.E6C11.fig = '6-5';
-				questions.E7B09.fig = questions.E7B10.fig = questions.E7B11.fig = '7-1';
-				questions.E7B12.fig = questions.E7B13.fig = '7-2';
-				questions.E7D06.fig = questions.E7D07.fig = questions.E7D08.fig = '7-3';
-				questions.E7D09.fig = questions.E7D10.fig = questions.E7D11.fig = '7-3';
-				questions.E7D12.fig = questions.E7D13.fig = '7-3';
-				questions.E7G09.fig = questions.E7G11.fig = questions.E7G12.fig = '7-4';
-				questions.E7G13.fig = '7-4';
-				questions.E9B02.fig = questions.E9B03.fig = questions.E9B04.fig = '9-1';
-				questions.E9C08.fig = questions.E9C09.fig = questions.E9C10.fig = '9-2';
-				questions.E9C11.fig = '9-2';
-				questions.E9G05.fig = questions.E9G06.fig = questions.E9G07.fig = '9-3';
-				callback(questions);
 			});
 		}
 		function getHeaders(questions, callback)
@@ -75,40 +69,193 @@
 				headers[id.substring(0,2)] = null;
 				headers[id.substring(0,3)] = null;
 			}
-			getText('extra08-sec.txt', function(text)
-			{
-				var re = /^SUBELEMENT (E.) -+ ([^\[]+)\[/mg;
-				var match;
-				while(match = re.exec(text))
+			$.ajax({
+				url:'build/extra08-sec.txt',
+				dataType:'text',
+				success:function(text)
 				{
-					headers[match[1]] = trim(match[2]);
-				}
+					var re = /^SUBELEMENT (E.) -+ ([^\[]+)\[/mg;
+					var match;
+					while(match = re.exec(text))
+					{
+						headers[match[1]] = trim(match[2]);
+					}
 
-				re = /^(E..) (.+)$/mg;
-				while(match = re.exec(text))
-				{
-					headers[match[1]] = trim(match[2]);
-				}
+					re = /^(E..) (.+)$/mg;
+					while(match = re.exec(text))
+					{
+						headers[match[1]] = trim(match[2]);
+					}
 
-				callback(headers);
+					callback(headers);
+				}
 			});
 		}
-		getQuestions(function(questions)
+
+		function loadSVG(url, callback)
 		{
-			getHeaders(questions, function(headers)
+			function parseStyle(str, transform)
 			{
-				var idx = 0;
-				for(var id in questions)
+				var DEFAULTS = {
+					'stroke-dasharray': 'none',
+					fill: 'none',
+					stroke: 'none',
+					'font-variant': 'normal',
+					'font-style': 'normal',
+					'font-stretch': 'normal',
+					'font-weight': 'normal',
+					'writing-mode': 'lr-tb',
+					'word-spacing': '0px'
+				};
+				var style = {};
+				if(str)
 				{
-					var q = questions[id];
-					idx++;
+					$.each(str.split(';'), function(idx, value)
+					{
+						var vals = value.split(':', 2);
+						style[vals[0]] = vals[1];
+					});
+					for(var key in DEFAULTS)
+					{
+						if(style[key] == DEFAULTS[key]) delete style[key];
+					}
+					delete style['-inkscape-font-specification'];
 				}
-				document.write(idx + ' questions found<br>');
-				document.write(JSON.stringify({title:'2008-2012 Amateur Radio Extra Element 4 Exam', headers:headers,questions:questions}));
+				if(transform)
+				{
+//					debugger;
+					var match = /matrix\((.+)\)/.exec(transform);
+					if(match) style['transform'] = 'm'+match[1];
+					match = /translate\((.+)\)/.exec(transform);
+					if(match) style['transform'] = 't'+match[1];
+				}
+				return style;
+			}
+			
+			function buildPaper(obj, arr)
+			{
+				if(!arr) arr = [];
+				$(obj).children().each(function()
+				{
+					switch(this.nodeName)
+					{
+						case 'svg':
+							arr.push($(this).attr('width') * 1);
+							arr.push($(this).attr('height') * 1);
+							buildPaper(this, arr);
+							break;
+						case 'g':
+							buildPaper(this, arr);
+							break;
+						case 'text':
+							var shape = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
+							shape.type = 'text';
+							shape.x = $(this).attr('x') * 1;
+							shape.y = $(this).attr('y') * 1;
+							shape.text = $(this).text();
+							if(shape['font-size'])
+							{
+								var matches = /^(.+?)(px)?$/.exec(shape['font-size']);
+								if(matches)
+								{
+									shape.y -= (matches[1] / 2);
+								}
+							}
+							arr.push(shape);
+							break;
+						case 'path':
+							var shape = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
+							var path = $(this).attr('d');
+							var matches = /^[mM] *([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]*([aA])[, ]*([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]+[01]+[, ]+[01]+[, ]+([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]*$/.exec(path);
+							if(matches)
+							{
+								debugger;
+								// this is a simple arc.  is it closed?
+								var arc = { sx:matches[1]*1, sy:matches[2]*1,
+									cmd:matches[3],
+									rx:matches[4]*1, ry:matches[5]*1,
+									rot:matches[6]*1,
+									dx:matches[7]*1, dy:matches[8]*1 };
+								if(arc.cmd=='A')
+								{
+									arc.dx -= arc.sx;
+									arc.dy -= arc.sy;
+								}
+								if(arc.dx*arc.dx+arc.dy*arc.dy < 0.0001*arc.rx*arc.rx)
+								{
+									shape.cx = arc.sx + arc.rx * Math.sin(Math.PI*arc.rot/180);
+									shape.cy = arc.sy + arc.ry * Math.cos(Math.PI*arc.rot/180);
+									// it's closed.  Is it a cicle?
+									if(Math.abs(arc.rx-arc.ry)/arc.rx < 0.0001)
+									{
+										shape.type = 'circle';
+										shape.r = arc.rx;
+									} else {
+										shape.type = 'ellipse';
+										shape.rx = arc.rx;
+										shape.ry = arc.ry;
+									}
+ 									arr.push(shape)
+									break;
+								}
+							}
+							shape.type = 'path';
+							shape.path = path;
+							arr.push(shape);
+							break;
+						case 'circle':
+							var style = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
+							shape.type = 'circle';
+							shape.cx = $(this).attr('cx') * 1;
+							shape.cy = $(this).attr('cy') * 1;
+							shape.r = $(this).attr('r') * 1;
+							arr.push(shape);
+							break;
+						case 'ellipse':
+							var style = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
+							shape.type = 'ellipse';
+							shape.cx = $(this).attr('cx') * 1;
+							shape.cy = $(this).attr('cy') * 1;
+							shape.rx = $(this).attr('rx') * 1;
+							shape.ry = $(this).attr('ry') * 1;
+							arr.push(shape);
+							break;
+//						default:
+//							debugger;
+					}
+				});
+				return arr;
+			}
+			
+			$.ajax({
+				url:url,
+				dataType:'text xml',
+				success:function(xml)
+				{
+					callback(buildPaper(xml));
+				}
+			});
+		}
+
+		$(document).ready(function()
+		{
+			getQuestions(function(questions)
+			{
+				getHeaders(questions, function(headers)
+				{
+					var idx = 0;
+					for(var id in questions)
+					{
+						var q = questions[id];
+						idx++;
+					}
+					document.write(idx + ' questions found<br>');
+					document.write(JSON.stringify({title:'2008-2012 Amateur Radio Extra Element 4 Exam', headers:headers,questions:questions}));
+				});
 			});
 		});
 	</script>
 </head>
-<body onload="getText">
+<body>
 </body>
 </html>
