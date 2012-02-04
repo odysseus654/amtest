@@ -84,8 +84,8 @@
 			{
 				var DEFAULTS = {
 					'stroke-dasharray': 'none',
-					fill: 'none',
-					stroke: 'none',
+//					fill: 'none',
+//					stroke: 'none',
 					'font-variant': 'normal',
 					'font-style': 'normal',
 					'font-stretch': 'normal',
@@ -202,6 +202,15 @@
 							shape.cy = $(this).attr('cy') * 1;
 							shape.rx = $(this).attr('rx') * 1;
 							shape.ry = $(this).attr('ry') * 1;
+							arr.push(shape);
+							break;
+						case 'rect':
+							var shape = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
+							shape.type = 'rect';
+							shape.x = $(this).attr('x') * 1;
+							shape.y = $(this).attr('y') * 1;
+							shape.width = $(this).attr('width') * 1;
+							shape.height = $(this).attr('height') * 1;
 							arr.push(shape);
 							break;
 //						default:

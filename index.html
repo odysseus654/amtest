@@ -2,6 +2,7 @@
 	<link rel="stylesheet" type="text/css" href="css/amtest.css" />
 	<script type="text/javascript" src="lib/jquery.js"></script>
 	<script type="text/javascript" src="lib/raphael-min.js"></script>
+	<script type="text/javascript" src="lib/scale_raphael.js"></script>
 	<script type="text/javascript" src="lib/questions.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function()
@@ -11,7 +12,13 @@
 				dataType:'json',
 				success:function(questions)
 				{
-					var paper = Raphael([0, 0].concat(questions.fig['9-3']));
+					var qlBase = $('<div/>').css('width','100%');
+					$(document.body).append(qlBase);
+					var fig = questions.fig['9-3'];
+					var paper = new ScaleRaphael(qlBase.get(0), fig[0], fig[1]);
+					paper.add(fig.slice(2));
+					paper.scaleAll(3);
+//					var paper = new Raphael([0, 0].concat(questions.fig['9-3']));
 					/*var list = [];
 					for(var id in questions.questions)
 					{
@@ -19,8 +26,6 @@
 						quest.id = id;
 						list.push(quest);
 					}
-					var qlBase = $('<div/>').css('width','100%');
-					$(document.body).append(qlBase);
 					(new QuestionList(qlBase, list)).showQuestion();
 					debugger;*/
 				}
