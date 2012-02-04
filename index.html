@@ -10,24 +10,27 @@
 			$.ajax({
 				url:'tests/extra08.json',
 				dataType:'json',
-				success:function(questions)
+				success:function(data)
 				{
+					fixupQuestions(data);
 					var qlBase = $('<div/>').css('width','100%');
 					$(document.body).append(qlBase);
-					var fig = questions.fig['9-3'];
+					/*var fig = data.fig['9-3'];
 					var paper = new ScaleRaphael(qlBase.get(0), fig[0], fig[1]);
 					paper.add(fig.slice(2));
-					paper.scaleAll(3);
-//					var paper = new Raphael([0, 0].concat(questions.fig['9-3']));
-					/*var list = [];
-					for(var id in questions.questions)
+					paper.scaleAll(3);*/
+					var list = [];
+					for(var id in data.questions)
 					{
-						var quest = questions.questions[id];
-						quest.id = id;
-						list.push(quest);
+						var quest = data.questions[id];
+						if(quest.fig)
+						{
+							quest.id = id;
+							list.push(quest);
+						}
 					}
+					debugger;
 					(new QuestionList(qlBase, list)).showQuestion();
-					debugger;*/
 				}
 			});
 		});

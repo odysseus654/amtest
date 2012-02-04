@@ -75,3 +75,9 @@ TABLE.ansrow TD
 {
 	padding: 10px;
 }
+
+DIV.figouter
+{
+	position:relative;
+	float:right
+}
