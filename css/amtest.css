@@ -81,3 +81,10 @@ DIV.figouter
 	position:relative;
 	float:right
 }
+
+DIV.figdiv
+{
+	cursor: pointer;
+	cursor: url(magnify.cur);
+	cursor: -moz-zoom-in;
+}
