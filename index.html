@@ -4,150 +4,15 @@
 	<script type="text/javascript" src="lib/raphael-min.js"></script>
 	<script type="text/javascript" src="lib/questions.js"></script>
 	<script type="text/javascript">
-		function loadSVG(url, callback)
-		{
-			function parseStyle(str, transform)
-			{
-				var DEFAULTS = {
-					'stroke-dasharray': 'none',
-					fill: 'none',
-					stroke: 'none',
-					'font-variant': 'normal',
-					'font-style': 'normal',
-					'font-stretch': 'normal',
-					'font-weight': 'normal',
-					'writing-mode': 'lr-tb',
-					'word-spacing': '0px'
-				};
-				var style = {};
-				if(str)
-				{
-					$.each(str.split(';'), function(idx, value)
-					{
-						var vals = value.split(':', 2);
-						style[vals[0]] = vals[1];
-					});
-					for(var key in DEFAULTS)
-					{
-						if(style[key] == DEFAULTS[key]) delete style[key];
-					}
-					delete style['-inkscape-font-specification'];
-				}
-				if(transform)
-				{
-//					debugger;
-					var match = /matrix\((.+)\)/.exec(transform);
-					if(match) style['transform'] = 'm'+match[1];
-					match = /translate\((.+)\)/.exec(transform);
-					if(match) style['transform'] = 't'+match[1];
-				}
-				return style;
-			}
-			
-			function buildPaper(obj, arr)
-			{
-				if(!arr) arr = [];
-				$(obj).children().each(function()
-				{
-					switch(this.nodeName)
-					{
-						case 'svg':
-							arr.push($(this).attr('width') * 1);
-							arr.push($(this).attr('height') * 1);
-							buildPaper(this, arr);
-							break;
-						case 'g':
-							buildPaper(this, arr);
-							break;
-						case 'text':
-							var shape = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
-							shape.type = 'text';
-							shape.x = $(this).attr('x') * 1;
-							shape.y = $(this).attr('y') * 1;
-							shape.text = $(this).text();
-							if(shape['font-size'])
-							{
-								var matches = /^(.+?)(px)?$/.exec(shape['font-size']);
-								if(matches)
-								{
-									shape.y -= (matches[1] / 2);
-								}
-							}
-							arr.push(shape);
-							break;
-						case 'path':
-							var shape = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
-							var path = $(this).attr('d');
-							var matches = /^[mM] *([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]*([aA])[, ]*([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]+[0-9\.e\-]+[, ]+[0-9]+[, ]+[0-9]+[, ]+([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]*$/.exec(path);
-							if(matches)
-							{
-								debugger;
-								// this is a simple arc.  is it closed?
-								var eloc = {x:matches[6]*1,y:matches[7]*1};
-								var r = {x:matches[4]*1,y:matches[5]*1};
-								if(matches[3]=='A')
-								{
-									eloc.x -= matches[1];
-									eloc.y -= matches[2];
-								}
-								if(eloc.x*eloc.x+eloc.y*eloc.y < 0.0001*r.x*r.x)
-								{
-									shape.cx = matches[1]*1;
-									shape.cy = matches[2]*1 + r.y;
-									// it's closed.  Is it a cicle?
-									if(Math.abs(r.x-r.y)/r.x < 0.0001)
-									{
-										shape.type = 'circle';
-										shape.r = r.x;
-									} else {
-										shape.type = 'ellipse';
-										shape.rx = r.x;
-										shape.ry = r.y;
-									}
- 									arr.push(shape)
-									break;
-								}
-							}
-							shape.type = 'path';
-							shape.path = path;
-							arr.push(shape);
-							break;
-						case 'circle':
-							var style = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
-							shape.type = 'circle';
-							shape.cx = $(this).attr('cx') * 1;
-							shape.cy = $(this).attr('cy') * 1;
-							shape.r = $(this).attr('r') * 1;
-							arr.push(shape);
-							break;
-//						default:
-//							debugger;
-					}
-				});
-				return arr;
-			}
-			
-			$.ajax({
-				url:url,
-				dataType:'text xml',
-				success:function(xml)
-				{
-					var shape = buildPaper(xml);
-					var paper = Raphael([0, 0].concat(shape));
-					callback(paper);
-				}
-			});
-		}
-		
 		$(document).ready(function()
 		{
-			/*
 			$.ajax({
 				url:'tests/extra08.json',
 				dataType:'json',
 				success:function(questions)
 				{
-					var list = [];
+					var paper = Raphael([0, 0].concat(questions.fig['9-3']));
+					/*var list = [];
 					for(var id in questions.questions)
 					{
 						var quest = questions.questions[id];
@@ -157,14 +22,10 @@
 					var qlBase = $('<div/>').css('width','100%');
 					$(document.body).append(qlBase);
 					(new QuestionList(qlBase, list)).showQuestion();
-					debugger;
+					debugger;*/
 				}
-			});*/
-			loadSVG('tests/extra08-9-2.svg', function(paper)
-			{
 			});
 		});
-
 	</script>
 </head>
 <body>

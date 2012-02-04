@@ -1,20 +1,21 @@
 <html><head>
 	<script type="text/javascript" src="lib/jquery.js"></script>
 	<script type="text/javascript" src="lib/json2.js"></script>
+	<script type="text/javascript" src="lib/questions.js"></script>
 	<script type="text/javascript">
 		function trim(str)
 		{
 			return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 		}
 
-		function getQuestions(callback)
+		function getQuestions(url, callback)
 		{
 			$.ajax({
-				url:'build/extra08-quest.txt',
+				url:url,
 				dataType:'text',
 				success:function(text)
 				{
-					var re = /^\x0c?(E[0-9][A-Z][0-9][0-9]) *\(([ABCD])\)( *\[([^\]]+)\])? *(.*)$([^\~]*)^A\. *([^\~]+)$[^\~]*B\. *([^\~]+)$[^\~]*C\. *([^\~]+)$[^\~]*D\. *([^\~]+)$/mg;
+					var re = /^\x0c?([TGE][0-9][A-Z][0-9][0-9]) *\(([ABCD])\)( *\[([^\]]+)\])? *(.*)$([^\~]*)^A\. *([^\~]+)$[^\~]*B\. *([^\~]+)$[^\~]*C\. *([^\~]+)$[^\~]*D\. *([^\~]+)$/mg;
 					var questions = {};
 					var match;
 					while(match = re.exec(text))
@@ -40,48 +41,33 @@
 						if(note) quest.note = note;
 						questions[match[1]] = quest;
 					}
-					questions.E5C19.fig = questions.E5C20.fig = questions.E5C21.fig = questions.E5C23.fig = '5-2';
-					questions.E6A07.fig = '6-1';
-					questions.E6A10.fig = questions.E6A11.fig = '6-2';
-					questions.E6B06.fig = questions.E6B11.fig = '6-3';
-					questions.E6C07.fig = questions.E6C08.fig = questions.E6C09.fig = '6-5';
-					questions.E6C10.fig = questions.E6C11.fig = '6-5';
-					questions.E7B09.fig = questions.E7B10.fig = questions.E7B11.fig = '7-1';
-					questions.E7B12.fig = questions.E7B13.fig = '7-2';
-					questions.E7D06.fig = questions.E7D07.fig = questions.E7D08.fig = '7-3';
-					questions.E7D09.fig = questions.E7D10.fig = questions.E7D11.fig = '7-3';
-					questions.E7D12.fig = questions.E7D13.fig = '7-3';
-					questions.E7G09.fig = questions.E7G11.fig = questions.E7G12.fig = '7-4';
-					questions.E7G13.fig = '7-4';
-					questions.E9B02.fig = questions.E9B03.fig = questions.E9B04.fig = '9-1';
-					questions.E9C08.fig = questions.E9C09.fig = questions.E9C10.fig = '9-2';
-					questions.E9C11.fig = '9-2';
-					questions.E9G05.fig = questions.E9G06.fig = questions.E9G07.fig = '9-3';
 					callback(questions);
 				}
 			});
 		}
-		function getHeaders(questions, callback)
+		function getHeaders(url, /*questions,*/ callback)
 		{
 			var headers = {};
+			/*
 			for(var id in questions)
 			{
 				headers[id.substring(0,2)] = null;
 				headers[id.substring(0,3)] = null;
 			}
+			*/
 			$.ajax({
-				url:'build/extra08-sec.txt',
+				url:url,
 				dataType:'text',
 				success:function(text)
 				{
-					var re = /^SUBELEMENT (E.) -+ ([^\[]+)\[/mg;
+					var re = /^SUBELEMENT ([TGE].) -+ ([^\[]+)\[/mg;
 					var match;
 					while(match = re.exec(text))
 					{
 						headers[match[1]] = trim(match[2]);
 					}
 
-					re = /^(E..) (.+)$/mg;
+					re = /^([TGE]..) (.+)$/mg;
 					while(match = re.exec(text))
 					{
 						headers[match[1]] = trim(match[2]);
@@ -123,7 +109,6 @@
 				}
 				if(transform)
 				{
-//					debugger;
 					var match = /matrix\((.+)\)/.exec(transform);
 					if(match) style['transform'] = 'm'+match[1];
 					match = /translate\((.+)\)/.exec(transform);
@@ -169,7 +154,6 @@
 							var matches = /^[mM] *([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]*([aA])[, ]*([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]+[01]+[, ]+[01]+[, ]+([0-9\.e\-]+)[, ]+([0-9\.e\-]+)[, ]*$/.exec(path);
 							if(matches)
 							{
-								debugger;
 								// this is a simple arc.  is it closed?
 								var arc = { sx:matches[1]*1, sy:matches[2]*1,
 									cmd:matches[3],
@@ -204,7 +188,7 @@
 							arr.push(shape);
 							break;
 						case 'circle':
-							var style = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
+							var shape = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
 							shape.type = 'circle';
 							shape.cx = $(this).attr('cx') * 1;
 							shape.cy = $(this).attr('cy') * 1;
@@ -212,7 +196,7 @@
 							arr.push(shape);
 							break;
 						case 'ellipse':
-							var style = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
+							var shape = parseStyle($(this).attr('style'), $(this).attr('transform')) || {};
 							shape.type = 'ellipse';
 							shape.cx = $(this).attr('cx') * 1;
 							shape.cy = $(this).attr('cy') * 1;
@@ -236,22 +220,105 @@
 				}
 			});
 		}
+		
+		function stepAsyncCommands(list, final)
+		{
+			for(;;)
+			{
+				if(!list || !list.length)
+				{
+					if(final) final();
+					return;
+				}
+				var nextItem = list.shift();
+				if(nextItem.async)
+				{
+					nextItem.async.call(null, function()
+					{
+						if(nextItem.action)
+						{
+							nextItem.action.apply(null, arguments);
+						}
+						stepAsyncCommands(list, final);
+					});
+					return;
+				}
+				else if(nextItem.action)
+				{
+					nextItem.action.call(null);
+				}
+				else
+				{
+					nextItem.call(null);
+				}
+			}
+		}
 
 		$(document).ready(function()
 		{
-			getQuestions(function(questions)
-			{
-				getHeaders(questions, function(headers)
+			var questions, headers, figdata;
+			
+			var commands = [
 				{
-					var idx = 0;
+					async:curry(getQuestions, 'build/extra08-quest.txt'),
+					action:function(q)
+					{
+						questions=q;
+						q.E5C19.fig = q.E5C20.fig = q.E5C21.fig = q.E5C23.fig = '5-2';
+						q.E6A07.fig = '6-1';
+						q.E6A10.fig = q.E6A11.fig = '6-2';
+						q.E6B06.fig = q.E6B11.fig = '6-3';
+						q.E6C07.fig = q.E6C08.fig = q.E6C09.fig = '6-5';
+						q.E6C10.fig = q.E6C11.fig = '6-5';
+						q.E7B09.fig = q.E7B10.fig = q.E7B11.fig = '7-1';
+						q.E7B12.fig = q.E7B13.fig = '7-2';
+						q.E7D06.fig = q.E7D07.fig = q.E7D08.fig = '7-3';
+						q.E7D09.fig = q.E7D10.fig = q.E7D11.fig = '7-3';
+						q.E7D12.fig = q.E7D13.fig = '7-3';
+						q.E7G09.fig = q.E7G11.fig = q.E7G12.fig = '7-4';
+						q.E7G13.fig = '7-4';
+						q.E9B02.fig = q.E9B03.fig = q.E9B04.fig = '9-1';
+						q.E9C08.fig = q.E9C09.fig = q.E9C10.fig = '9-2';
+						q.E9C11.fig = '9-2';
+						q.E9G05.fig = q.E9G06.fig = q.E9G07.fig = '9-3';
+					}
+				},
+				{
+					async:curry(getHeaders, 'build/extra08-sec.txt'),
+					action:function(h){headers=h;}
+				},
+				function()
+				{
+					var figs = {};
 					for(var id in questions)
 					{
 						var q = questions[id];
-						idx++;
+						if(q.fig && !figs[q.fig]) figs[q.fig] = true;
 					}
-					document.write(idx + ' questions found<br>');
-					document.write(JSON.stringify({title:'2008-2012 Amateur Radio Extra Element 4 Exam', headers:headers,questions:questions}));
-				});
+					for(var fig in figs)
+					{
+						if(!figdata) figdata = {};
+						commands.push({
+							async:curry(loadSVG, 'build/extra08-' + fig + '.svg'),
+							action:curry(function(fig, data)
+							{
+								figdata[fig] = data;
+							}, fig)
+						});
+					}
+				}
+			];
+			
+			stepAsyncCommands(commands, function()
+			{
+				var final = {
+					title:'2008-2012 Amateur Radio Extra Element 4 Exam',
+					headers:headers,
+					questions:questions
+				};
+				if(figdata) final.fig = figdata;
+				debugger;
+				document.write(JSON.stringify(final));
 			});
 		});
 	</script>
