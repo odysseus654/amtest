@@ -4,6 +4,7 @@ DIV.qouter
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: left;
 }
 
 DIV.qheader
@@ -15,6 +16,13 @@ SPAN.qid
 {
 	color: grey;
 	font-weight: bold;
+}
+
+SPAN.qnote
+{
+	margin-left: 25px;
+	font-size: 10pt;
+	font-style: italic;
 }
 
 SPAN.qsrc
@@ -80,11 +88,4 @@ DIV.figouter
 {
 	position:relative;
 	float:right
-}
-
-DIV.figdiv
-{
-	cursor: pointer;
-	cursor: url(magnify.cur);
-	cursor: -moz-zoom-in;
 }

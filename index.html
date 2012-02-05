@@ -13,21 +13,15 @@
 				success:function(data)
 				{
 					fixupQuestions(data);
-					var qlBase = $('<div/>').css('width','100%');
-					$(document.body).append(qlBase);
-					/*var fig = data.fig['9-3'];
-					var paper = new ScaleRaphael(qlBase.get(0), fig[0], fig[1]);
-					paper.add(fig.slice(2));
-					paper.scaleAll(3);*/
+					var qlBase = $('<div/>')
+						.css({width:'100%','text-align':'center'})
+						.appendTo(document.body);
+
 					var list = [];
 					for(var id in data.questions)
 					{
 						var quest = data.questions[id];
-						if(quest.fig)
-						{
-							quest.id = id;
-							list.push(quest);
-						}
+						list.push(quest);
 					}
 					debugger;
 					(new QuestionList(qlBase, list)).showQuestion();
