@@ -281,10 +281,12 @@
 			
 			var commands = [
 				{
-					async:curry(getQuestions, 'build/extra08-quest.txt'),
+					async:curry(getQuestions, 'build/extra12-quest.txt'),
 					action:function(q)
 					{
 						questions=q;
+					/*
+						// extra08 question figures
 						q.E5C19.fig = q.E5C20.fig = q.E5C21.fig = q.E5C23.fig = '5-2';
 						q.E6A07.fig = '6-1';
 						q.E6A10.fig = q.E6A11.fig = '6-2';
@@ -302,10 +304,29 @@
 						q.E9C08.fig = q.E9C09.fig = q.E9C10.fig = '9-2';
 						q.E9C11.fig = '9-2';
 						q.E9G05.fig = q.E9G06.fig = q.E9G07.fig = '9-3';
+					*/
+						// extra12 question figures
+						q.E5C19.fig = q.E5C20.fig = q.E5C21.fig = q.E5C23.fig = '5-2';
+						q.E6A07.fig = '6-1';
+						q.E6A10.fig = q.E6A11.fig = '6-2';
+						q.E6B10.fig = '6-3';
+						q.E6C07.fig = q.E6C08.fig = q.E6C09.fig = '6-5';
+						q.E6C10.fig = q.E6C11.fig = '6-5';
+						q.E7B10.fig = q.E7B11.fig = q.E7B12.fig = '7-1';
+						q.E7B13.fig = q.E7B14.fig = '7-2';
+						q.E7D06.fig = q.E7D07.fig = q.E7D08.fig = '7-3';
+						q.E7D09.fig = q.E7D10.fig = q.E7D11.fig = '7-3';
+						q.E7D12.fig = q.E7D13.fig = '7-3';
+						q.E7G07.fig = q.E7G09.fig = q.E7G10.fig = '7-4';
+						q.E7G11.fig = '7-4';
+						q.E9B01.fig = q.E9B02.fig = q.E9B03.fig = '9-1';
+						q.E9C07.fig = q.E9C08.fig = q.E9C09.fig = '9-2';
+						q.E9C10.fig = '9-2';
+						q.E9G05.fig = q.E9G06.fig = q.E9G07.fig = '9-3';
 					}
 				},
 				{
-					async:curry(getHeaders, 'build/extra08-sec.txt'),
+					async:curry(getHeaders, 'build/extra12-sec.txt'),
 					action:function(h){headers=h;}
 				},
 				function()
@@ -333,7 +354,7 @@
 			stepAsyncCommands(commands, function()
 			{
 				var final = {
-					title:'2008-2012 Amateur Radio Extra Element 4 Exam',
+					title:'2012-2016 Amateur Radio Extra Element 4 Exam',
 					headers:headers,
 					questions:questions
 				};
