@@ -1,3 +1,9 @@
+DIV.main-body
+{
+	width: 100%;
+	text-align: center;
+}
+
 DIV.qouter
 {
 	font: 16pt Arial,sans-serif;
@@ -88,4 +94,27 @@ DIV.figouter
 {
 	position:relative;
 	float:right
+}
+
+DIV.progBox
+{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font: 12pt Arial,sans-serif;
+}
+
+TABLE.progress
+{
+	width: 100%;
+	border: 2px solid black;
+	border-collapse: collapse;
+	table-layout: fixed;
+	clear: both;
+}
+
+TABLE.progress TD
+{
+	padding: 0;
 }

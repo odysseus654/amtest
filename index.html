@@ -13,8 +13,7 @@
 				success:function(data)
 				{
 					fixupQuestions(data);
-					var qlBase = $('<div/>')
-						.css({width:'100%','text-align':'center'})
+					var qlBase = $('<div/>',{'class':'main-body'})
 						.appendTo(document.body);
 
 					var list = [];
