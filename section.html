@@ -1,0 +1,118 @@
+<!-- Amateur Radio Practice Test
+ * (yes I know, really generic name, come up with a better one later?)
+ * http://github.com/odysseus654/amtest
+ * Copyright 2012 Erik Anderson
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *-->
+<html><head>
+	<link rel="stylesheet" type="text/css" href="css/amtest.css" />
+	<link rel="stylesheet" type="text/css" href="css/tristate.css" />
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/raphael-min.js"></script>
+	<script type="text/javascript" src="lib/scale_raphael.js"></script>
+	<script type="text/javascript" src="lib/tristate.js" ></script>
+	<script type="text/javascript" src="lib/questions.js"></script>
+	<script type="text/javascript">
+		function qsorter(a,b)
+		{
+			if((a.name.substring(1, 2) == '0') == (b.name.substring(1, 2) == '0'))
+			{
+				return a.name < b.name ? -1 : a.name > b.name ? +1 : 0;
+			} else {
+				return a.name.substring(1, 2) == '0' ? +1 : -1;
+			}
+		}
+
+		$(document).ready(function()
+		{
+			$.ajax({
+				url:'tests/extra08.json',
+				dataType:'json',
+				success:function(data)
+				{
+					fixupQuestions(data);
+					var qlBase = $('<div/>',{'class':'main-body'})
+						.appendTo(document.body);
+					
+					var secCheck = {};
+					var secList = [];
+					for(var id in data.questions)
+					{
+						var twoChar = id.substring(0,2);
+						if(!secCheck[twoChar])
+						{
+							secCheck[twoChar] = data.headers[twoChar];
+							secList.push({name:twoChar,descr:data.headers[twoChar]});
+						}
+						secCheck[id.substring(0,3)] = data.headers[id.substring(0,3)];
+					}
+					secList.sort(qsorter);
+					
+					debugger;
+					var tableObj = $('<tbody/>')
+						.appendTo($('<table/>')
+							.appendTo(qlBase));
+					for(var sec=0; sec < secList.length; sec++)
+					{
+						var secObj = secList[sec];
+						var subList = [];
+						for(var id in secCheck)
+						{
+							if(id.length == 3 && id.substring(0, 2) == secObj.name)
+							{
+								subList.push({name:id,descr:secCheck[id]});
+							}
+						}
+						var secRow = $('<tr/>')
+							.append($('<td/>')
+								.text(secObj.name))
+							.append($('<td/>',{colspan:2})
+								.text(secObj.descr))
+							.appendTo(tableObj);
+						subList.sort(qsorter);
+						var subCollection = $();
+						for(var sub=0; sub < subList.length; sub++)
+						{
+							var subObj = subList[sub];
+							var subqlist = [];
+							for(var id in data.questions)
+							{
+								if(id.substring(0, 3) == subObj.name)
+								{
+									subqlist.push({name:id});
+								}
+							}
+							var subRow = $('<tr/>')
+								.append($('<td/>'))
+								.append($('<td/>')
+									.text(subObj.name))
+								.append($('<td/>')
+									.text(subObj.descr)
+									.append($('<b/>')
+										.text(' (' + subqlist.length + ' Questions)')))
+								.appendTo(tableObj);
+							new TriStateCheckBox({ box:$($('TD', subRow).get(1)) });
+							subCollection = subCollection.add(subRow);
+						}
+						new TriStateCheckBox({ box:$($('TD', secRow).get(0)), children:subCollection });
+					}
+					debugger;
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>
