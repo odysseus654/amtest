@@ -61,7 +61,7 @@
 					
 					debugger;
 					var tableObj = $('<tbody/>')
-						.appendTo($('<table/>')
+						.appendTo($('<table/>',{'class':'sec-choice'})
 							.appendTo(qlBase));
 					for(var sec=0; sec < secList.length; sec++)
 					{
@@ -74,10 +74,10 @@
 								subList.push({name:id,descr:secCheck[id]});
 							}
 						}
-						var secRow = $('<tr/>')
-							.append($('<td/>')
+						var secRow = $('<tr/>',{'class':'section'})
+							.append($('<td/>',{'class':'name'})
 								.text(secObj.name))
-							.append($('<td/>',{colspan:2})
+							.append($('<td/>',{colspan:2,'class':'descr'})
 								.text(secObj.descr))
 							.appendTo(tableObj);
 						subList.sort(qsorter);
@@ -93,11 +93,11 @@
 									subqlist.push({name:id});
 								}
 							}
-							var subRow = $('<tr/>')
+							var subRow = $('<tr/>',{'class':'subsection'})
 								.append($('<td/>'))
-								.append($('<td/>')
+								.append($('<td/>',{'class':'name'})
 									.text(subObj.name))
-								.append($('<td/>')
+								.append($('<td/>',{'class':'descr'})
 									.text(subObj.descr)
 									.append($('<b/>')
 										.text(' (' + subqlist.length + ' Questions)')))
