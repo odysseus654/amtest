@@ -1,0 +1,38 @@
+SPAN.tristate
+{
+	width: 14;
+	height: 14;
+	background-image: url(tristate.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+SPAN.tristate.unchecked
+{
+	background-position: 0 0;
+}
+
+SPAN.tristate.checked
+{
+	background-position: -28 0;
+}
+
+SPAN.tristate.indeterminate
+{
+	background-position: -14 0;
+}
+
+SPAN.tristate.unchecked.hover
+{
+	background-position: 0 -14;
+}
+
+SPAN.tristate.checked.hover
+{
+	background-position: -28 -14;
+}
+
+SPAN.tristate.indeterminate.hover
+{
+	background-position: -14 -14;
+}
