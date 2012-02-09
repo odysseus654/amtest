@@ -17,7 +17,7 @@ SPAN.tristate.checked
 	background-position: -28 0;
 }
 
-SPAN.tristate.indeterminate
+SPAN.tristate.checked.unchecked
 {
 	background-position: -14 0;
 }
@@ -32,7 +32,7 @@ SPAN.tristate.checked.hover
 	background-position: -28 -14;
 }
 
-SPAN.tristate.indeterminate.hover
+SPAN.tristate.checked.unchecked.hover
 {
 	background-position: -14 -14;
 }

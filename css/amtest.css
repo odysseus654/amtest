@@ -1,3 +1,8 @@
+TABLE.sec-choice
+{
+	font: 12pt Arial,sans-serif;
+}
+
 TABLE.sec-choice TR.section
 {
 	font-weight: bold;
@@ -8,15 +13,29 @@ TABLE.sec-choice TR.subsection
 	font-style: italic;
 }
 
+TABLE.sec-choice TR.subsection TD.descr
+{
+	font-size: 10pt;
+	vertical-align: top;
+}
+
+TABLE.sec-choice SPAN.expander
+{
+	width: 16;
+	height: 16;
+	background-image: url(expand-yes.png);
+	display: inline-block;
+}
+
+TABLE.sec-choice TR.collapsed SPAN.expander
+{
+	background-image: url(expand-no.png);
+}
+
 TABLE.sec-choice TD.name
 {
 	white-space: nowrap;
 	vertical-align: top;
-}
-
-TABLE.sec-choice SPAN.tristate
-{
-	margin-right: 5px;
 }
 
 DIV.main-body

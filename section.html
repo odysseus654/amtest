@@ -34,6 +34,20 @@
 			}
 		}
 
+		function onExpandSection(secId)
+		{
+			var targets = $('TABLE.sec-choice TR.subsection.subof-'+secId);
+			var ourRow = $(this).parents('TR');
+			if(ourRow.hasClass('collapsed'))
+			{
+				ourRow.removeClass('collapsed');
+				targets.css('display','');
+			} else {
+				ourRow.addClass('collapsed');
+				targets.css('display','none');
+			}
+		}
+
 		$(document).ready(function()
 		{
 			$.ajax({
@@ -76,10 +90,13 @@
 						}
 						var secRow = $('<tr/>',{'class':'section'})
 							.append($('<td/>',{'class':'name'})
-								.text(secObj.name))
+								.text(secObj.name)
+								.prepend($('<span/>',{'class':'expander'})))
 							.append($('<td/>',{colspan:2,'class':'descr'})
 								.text(secObj.descr))
 							.appendTo(tableObj);
+						$('SPAN.expander', secRow).on('click', curry(onExpandSection, secObj.name));
+						
 						subList.sort(qsorter);
 						var subCollection = $();
 						for(var sub=0; sub < subList.length; sub++)
@@ -93,15 +110,19 @@
 									subqlist.push({name:id});
 								}
 							}
-							var subRow = $('<tr/>',{'class':'subsection'})
+							var subRow = $('<tr/>',{'class':'subsection collapsed'})
+								.addClass('subof-' + secObj.name)
 								.append($('<td/>'))
 								.append($('<td/>',{'class':'name'})
-									.text(subObj.name))
+									.text(subObj.name)
+									.prepend($('<span/>',{'class':'expander'})))
 								.append($('<td/>',{'class':'descr'})
 									.text(subObj.descr)
 									.append($('<b/>')
 										.text(' (' + subqlist.length + ' Questions)')))
 								.appendTo(tableObj);
+//							$('SPAN.expander', subRow).on('click', curry(onExpandSubsection, secObj.name));
+
 							new TriStateCheckBox({ box:$($('TD', subRow).get(1)) });
 							subCollection = subCollection.add(subRow);
 						}
