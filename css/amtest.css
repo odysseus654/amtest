@@ -9,6 +9,11 @@ TABLE.sec-choice TR.section
 	font-weight: bold;
 }
 
+TABLE.sec-choice TR.section SPAN.qcount
+{
+	font-weight: normal;
+}
+
 TABLE.sec-choice TR.sec-hidden
 {
 	display: none;
@@ -30,6 +35,11 @@ TABLE.sec-choice TR.subsection TD.descr
 	vertical-align: top;
 }
 
+TABLE.sec-choice TR.subsection SPAN.qcount
+{
+	font-weight: bold;
+}
+
 TABLE.sec-choice TR.questsection SPAN.question
 {
 	display: inline-block;
@@ -40,6 +50,16 @@ TABLE.sec-choice TR.questsection SPAN.question
 }
 
 TABLE.sec-choice TR.questsection SPAN.question SPAN.tristate
+{
+	margin-right: 5px;
+}
+
+TABLE.sec-choice TR.global TD
+{
+	font-size: 10pt;
+}
+
+TABLE.sec-choice TR.global SPAN.tristate
 {
 	margin-right: 5px;
 }

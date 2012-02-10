@@ -62,7 +62,7 @@
 					// create the section if it doesn't already exist
 					var detailRow = $('<tr/>',{'class':'questsection'})
 						.addClass('subof-' + secId)
-						.addClass('subof-' + secId.substr(0, 1))
+						.addClass('subof-' + secId.substr(0, 2))
 						.append($('<td/>'))
 						.append($('<td/>'))
 						.insertAfter(ourRow);
@@ -97,22 +97,121 @@
 		{
 			this.questionState = params.questionState;
 			this.questId = params.questId;
+			var isChecked = false;
+			var isUnchecked = false;
+			for(var id in this.questionState)
+			{
+				if(id.substring(0, this.questId.length) == this.questId)
+				{
+					if(this.questionState[id])
+					{
+						isChecked = true;
+					} else {
+						isUnchecked = true;
+					}
+				}
+			}
+			params.state = isChecked && isUnchecked ? undefined : isChecked;
 			TriStateCheckBox.call(this, params);
+			if(!this.numQuestions) this.pullStateFromChildren();
 		}
 		CategoryCheckbox.prototype = new TriStateCheckBox();
 		
+		CategoryCheckbox.prototype.setState = function(state)
+		{
+			TriStateCheckBox.prototype.setState.call(this, state);
+			var numQuestionsSelected = this.numQuestionsSelected;
+			switch(state)
+			{
+				case TriStateCheckBox.STATE_ALL:
+					numQuestionsSelected = this.numQuestions;
+					break;
+				case TriStateCheckBox.STATE_NONE:
+					numQuestionsSelected = 0;
+					break;
+			}
+			if(numQuestionsSelected !== this.numQuestionsSelected)
+			{
+				var ourRow = $('SPAN.qcount', $(this.triStateBox).parents('TR'));
+				if(ourRow.length)
+				{
+					if(numQuestionsSelected == this.numQuestions)
+					{
+						ourRow.text(' (' + this.numQuestions + ' questions selected)');
+					} else {
+						ourRow.text(' (' + numQuestionsSelected + ' of ' + this.numQuestions + ' questions selected)');
+					}
+				}
+				this.numQuestionsSelected = numQuestionsSelected;
+			}
+		};
+		
+		CategoryCheckbox.prototype.pullStateFromChildren = function(bForce)
+		{
+			var anyBoxes = false;
+			var allBoxesSelected = true;
+			var allBoxesUnselected = true;
+			var numQuestions = 0;
+			var numQuestionsSelected = 0;
+			for(var id in this.questionState)
+			{
+				if(id.substring(0, this.questId.length) == this.questId)
+				{
+					anyBoxes = true;
+					numQuestions++;
+					if(this.questionState[id])
+					{
+						allBoxesUnselected = false;
+						numQuestionsSelected++;
+					} else {
+						allBoxesSelected = false;
+					}
+				}
+			}
+			if(numQuestionsSelected !== this.numQuestionsSelected)
+			{
+				var ourRow = $('SPAN.qcount', $(this.triStateBox).parents('TR'));
+				if(ourRow.length)
+				{
+					if(numQuestionsSelected == numQuestions)
+					{
+						ourRow.text(' (' + numQuestions + ' questions selected)');
+					} else {
+						ourRow.text(' (' + numQuestionsSelected + ' of ' + numQuestions + ' questions selected)');
+					}
+				}
+				this.numQuestionsSelected = numQuestionsSelected;
+				this.numQuestions = numQuestions;
+			}
+			
+			var state = this.state;
+			if(anyBoxes)
+			{
+				state = allBoxesSelected ? TriStateCheckBox.STATE_ALL :
+					allBoxesUnselected ? TriStateCheckBox.STATE_NONE :
+					TriStateCheckBox.STATE_SOME;
+			}
+			if(this.state != state || bForce)
+			{
+				this.state = state;
+				this.updateImageState();
+			}
+		};
+
 		CategoryCheckbox.prototype.updateImageState = function()
 		{
 			TriStateCheckBox.prototype.updateImageState.call(this);
-			
-			switch(this.state)
+			if(this.questId.length > 2)
 			{
-				case TriStateCheckBox.STATE_ALL:
-					this.flagQuestions(true);
-					break;
-				case TriStateCheckBox.STATE_NONE:
-					this.flagQuestions(false);
-					break;
+				switch(this.state)
+				{
+					case TriStateCheckBox.STATE_ALL:
+						this.flagQuestions(true);
+						break;
+					case TriStateCheckBox.STATE_NONE:
+						this.flagQuestions(false);
+						break;
+				}
 			}
 		};
 		
@@ -157,6 +256,14 @@
 					var tableObj = $('<tbody/>')
 						.appendTo($('<table/>',{'class':'sec-choice'})
 							.appendTo(qlBase));
+					
+					var globalRow = $('<tr/>',{'class':'global'})
+						.append($('<td/>',{colspan:3})
+							.text('Check / Uncheck All')
+							.append($('<span class="qcount"></span>')))
+						.appendTo(tableObj);
+					
+					var secCollection = $();
 					for(var sec=0; sec < secList.length; sec++)
 					{
 						var secObj = secList[sec];
@@ -168,12 +275,13 @@
 								subList.push({name:id,descr:secCheck[id]});
 							}
 						}
-						var secRow = $('<tr/>',{'class':'section'})
+						var secRow = $('<tr/>',{'class':'section collapsed'})
 							.append($('<td/>',{'class':'name'})
 								.text(secObj.name)
 								.prepend($('<span/>',{'class':'expander'})))
 							.append($('<td/>',{colspan:2,'class':'descr'})
-								.text(secObj.descr))
+								.text(secObj.descr)
+								.append($('<span class="qcount"></span>')))
 							.appendTo(tableObj);
 						
 						$('SPAN.expander', secRow).on('click', curry(onExpandSection, secObj.name, 'sec-hidden'));
@@ -191,7 +299,7 @@
 									subqlist.push({name:id,descr:data.questions[id].q});
 								}
 							}
-							var subRow = $('<tr/>',{'class':'subsection collapsed'})
+							var subRow = $('<tr/>',{'class':'subsection collapsed sec-hidden'})
 								.addClass('subof-' + secObj.name)
 								.append($('<td/>'))
 								.append($('<td/>',{'class':'name'})
@@ -199,8 +307,7 @@
 									.prepend($('<span/>',{'class':'expander'})))
 								.append($('<td/>',{'class':'descr'})
 									.text(subObj.descr)
-									.append($('<b/>')
-										.text(' (' + subqlist.length + ' Questions)')))
+									.append($('<span class="qcount"></span>')))
 								.appendTo(tableObj);
 							
 							subqlist.sort(qsorter);
@@ -210,17 +317,26 @@
 							new CategoryCheckbox({
 								box: $($('TD', subRow).get(1)),
 								questionState: questionState,
-								questId: subObj.name,
-								state: true
+								questId: subObj.name
 							});
 							subCollection = subCollection.add(subRow);
 						}
 						
-						new TriStateCheckBox({
+						new CategoryCheckbox({
 							box: $($('TD', secRow).get(0)),
-							children: subCollection
+							children: subCollection,
+							questionState: questionState,
+							questId: secObj.name
 						});
+						secCollection = secCollection.add(secRow);
 					}
+					
+					new CategoryCheckbox({
+						box: $($('TD', globalRow).get(0)),
+						children: secCollection,
+						questionState: questionState,
+						questId: ''
+					});
 				}
 			});
 		});
