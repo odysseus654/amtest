@@ -9,6 +9,16 @@ TABLE.sec-choice TR.section
 	font-weight: bold;
 }
 
+TABLE.sec-choice TR.sec-hidden
+{
+	display: none;
+}
+
+TABLE.sec-choice TR.sub-hidden
+{
+	display: none;
+}
+
 TABLE.sec-choice TR.subsection
 {
 	font-style: italic;

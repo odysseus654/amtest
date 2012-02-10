@@ -20,9 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="css/amtest.css" />
 	<link rel="stylesheet" type="text/css" href="css/tristate.css" />
 	<script type="text/javascript" src="lib/jquery.js"></script>
-	<script type="text/javascript" src="lib/raphael-min.js"></script>
-	<script type="text/javascript" src="lib/scale_raphael.js"></script>
-	<script type="text/javascript" src="lib/tristate.js" ></script>
+	<script type="text/javascript" src="lib/tristate.js"></script>
 	<script type="text/javascript" src="lib/questions.js"></script>
 	<script type="text/javascript">
 		function qsorter(a,b)
@@ -34,21 +32,101 @@
 				return a.name.substring(1, 2) == '0' ? +1 : -1;
 			}
 		}
-
-		function onExpandSection(secId)
+		
+		function onExpandSection(secId, suppressSection)
 		{
-			var targets = $('TABLE.sec-choice TR.subsection.subof-'+secId);
+			var targets = $('TABLE.sec-choice TR.subof-'+secId);
 			var ourRow = $(this).parents('TR');
 			if(ourRow.hasClass('collapsed'))
 			{
 				ourRow.removeClass('collapsed');
-				targets.css('display','');
+				targets.removeClass(suppressSection);
 			} else {
 				ourRow.addClass('collapsed');
-				targets.css('display','none');
+				targets.addClass(suppressSection);
 			}
 		}
-
+		
+		function onExpandSubsection(secId, suppressSection, questionState, subqlist)
+		{
+			// handle existing secttions
+			var targets = $('TABLE.sec-choice TR.subof-'+secId);
+			var ourRow = $(this).parents('TR');
+			if(ourRow.hasClass('collapsed'))
+			{
+				ourRow.removeClass('collapsed');
+				targets.removeClass(suppressSection);
+				
+				if(!targets.length)
+				{
+					// create the section if it doesn't already exist
+					var detailRow = $('<tr/>',{'class':'questsection'})
+						.addClass('subof-' + secId)
+						.addClass('subof-' + secId.substr(0, 1))
+						.append($('<td/>'))
+						.append($('<td/>'))
+						.insertAfter(ourRow);
+					var questBlock = $('<td/>')
+						.appendTo(detailRow);
+					
+					var detailCollection = $();
+					for(var qidx=0; qidx < subqlist.length; qidx++)
+					{
+						var questObj = subqlist[qidx];
+						var qobj = $('<span/>',{'class':'question',title:questObj.descr})
+							.text(questObj.name)
+							.appendTo(questBlock);
+						
+						new CategoryCheckbox({
+							box: qobj.get(0),
+							questionState: questionState,
+							questId: questObj.name,
+							state: questionState[questObj.name]
+						});
+						detailCollection = detailCollection.add(qobj);
+					}
+					$('SPAN.tristate', ourRow).triggerHandler('addChildren', {children:detailCollection});
+				}
+			} else {
+				ourRow.addClass('collapsed');
+				targets.addClass(suppressSection);
+			}
+		}
+		
+		function CategoryCheckbox(params)
+		{
+			this.questionState = params.questionState;
+			this.questId = params.questId;
+			TriStateCheckBox.call(this, params);
+		}
+		CategoryCheckbox.prototype = new TriStateCheckBox();
+		
+		CategoryCheckbox.prototype.updateImageState = function()
+		{
+			TriStateCheckBox.prototype.updateImageState.call(this);
+			
+			switch(this.state)
+			{
+				case TriStateCheckBox.STATE_ALL:
+					this.flagQuestions(true);
+					break;
+				case TriStateCheckBox.STATE_NONE:
+					this.flagQuestions(false);
+					break;
+			}
+		};
+		
+		CategoryCheckbox.prototype.flagQuestions = function(checked)
+		{
+			for(var id in this.questionState)
+			{
+				if(id.substring(0, this.questId.length) == this.questId)
+				{
+					this.questionState[id] = checked;
+				}
+			}
+		};
+		
 		$(document).ready(function()
 		{
 			$.ajax({
@@ -62,6 +140,7 @@
 					
 					var secCheck = {};
 					var secList = [];
+					var questionState = {};
 					for(var id in data.questions)
 					{
 						var twoChar = id.substring(0,2);
@@ -71,10 +150,10 @@
 							secList.push({name:twoChar,descr:data.headers[twoChar]});
 						}
 						secCheck[id.substring(0,3)] = data.headers[id.substring(0,3)];
+						questionState[id] = true;
 					}
 					secList.sort(qsorter);
 					
-					debugger;
 					var tableObj = $('<tbody/>')
 						.appendTo($('<table/>',{'class':'sec-choice'})
 							.appendTo(qlBase));
@@ -96,7 +175,8 @@
 							.append($('<td/>',{colspan:2,'class':'descr'})
 								.text(secObj.descr))
 							.appendTo(tableObj);
-						$('SPAN.expander', secRow).on('click', curry(onExpandSection, secObj.name));
+						
+						$('SPAN.expander', secRow).on('click', curry(onExpandSection, secObj.name, 'sec-hidden'));
 						
 						subList.sort(qsorter);
 						var subCollection = $();
@@ -122,35 +202,25 @@
 									.append($('<b/>')
 										.text(' (' + subqlist.length + ' Questions)')))
 								.appendTo(tableObj);
-//							$('SPAN.expander', subRow).on('click', curry(onExpandSubsection, secObj.name));
-
-							var detailRow = $('<tr/>',{'class':'questsection'})
-								.addClass('subof-' + secObj.name)
-								.addClass('subof-' + subObj.name)
-								.append($('<td/>'))
-								.append($('<td/>'))
-								.appendTo(tableObj);
-							var questBlock = $('<td/>')
-								.appendTo(detailRow);
-
+							
 							subqlist.sort(qsorter);
-							var detailCollection = $();
-							for(var qidx=0; qidx < subqlist.length; qidx++)
-							{
-								var questObj = subqlist[qidx];
-								var qobj = $('<span/>',{'class':'question',title:questObj.descr})
-									.text(questObj.name)
-									.appendTo(questBlock);
-								new TriStateCheckBox({ box:qobj.get(0) });
-								detailCollection = detailCollection.add(qobj);
-							}
-
-							new TriStateCheckBox({ box:$($('TD', subRow).get(1)), children:detailCollection });
+							$('SPAN.expander', subRow).on('click',
+								curry(onExpandSubsection, subObj.name, 'sub-hidden', questionState, subqlist));
+							
+							new CategoryCheckbox({
+								box: $($('TD', subRow).get(1)),
+								questionState: questionState,
+								questId: subObj.name,
+								state: true
+							});
 							subCollection = subCollection.add(subRow);
 						}
-						new TriStateCheckBox({ box:$($('TD', secRow).get(0)), children:subCollection });
+						
+						new TriStateCheckBox({
+							box: $($('TD', secRow).get(0)),
+							children: subCollection
+						});
 					}
-					debugger;
 				}
 			});
 		});
