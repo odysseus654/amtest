@@ -1,7 +1,7 @@
 SPAN.tristate
 {
-	width: 14;
-	height: 14;
+	width: 14px;
+	height: 14px;
 	background-image: url(tristate.png);
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -14,25 +14,25 @@ SPAN.tristate.unchecked
 
 SPAN.tristate.checked
 {
-	background-position: -28 0;
+	background-position: -28px 0;
 }
 
 SPAN.tristate.checked.unchecked
 {
-	background-position: -14 0;
+	background-position: -14px 0;
 }
 
 SPAN.tristate.unchecked.hover
 {
-	background-position: 0 -14;
+	background-position: 0 -14px;
 }
 
 SPAN.tristate.checked.hover
 {
-	background-position: -28 -14;
+	background-position: -28px -14px;
 }
 
 SPAN.tristate.checked.unchecked.hover
 {
-	background-position: -14 -14;
+	background-position: -14px -14px;
 }

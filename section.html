@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- Amateur Radio Practice Test
  * (yes I know, really generic name, come up with a better one later?)
  * http://github.com/odysseus654/amtest
@@ -107,7 +108,7 @@
 							{
 								if(id.substring(0, 3) == subObj.name)
 								{
-									subqlist.push({name:id});
+									subqlist.push({name:id,descr:data.questions[id].q});
 								}
 							}
 							var subRow = $('<tr/>',{'class':'subsection collapsed'})
@@ -123,7 +124,28 @@
 								.appendTo(tableObj);
 //							$('SPAN.expander', subRow).on('click', curry(onExpandSubsection, secObj.name));
 
-							new TriStateCheckBox({ box:$($('TD', subRow).get(1)) });
+							var detailRow = $('<tr/>',{'class':'questsection'})
+								.addClass('subof-' + secObj.name)
+								.addClass('subof-' + subObj.name)
+								.append($('<td/>'))
+								.append($('<td/>'))
+								.appendTo(tableObj);
+							var questBlock = $('<td/>')
+								.appendTo(detailRow);
+
+							subqlist.sort(qsorter);
+							var detailCollection = $();
+							for(var qidx=0; qidx < subqlist.length; qidx++)
+							{
+								var questObj = subqlist[qidx];
+								var qobj = $('<span/>',{'class':'question',title:questObj.descr})
+									.text(questObj.name)
+									.appendTo(questBlock);
+								new TriStateCheckBox({ box:qobj.get(0) });
+								detailCollection = detailCollection.add(qobj);
+							}
+
+							new TriStateCheckBox({ box:$($('TD', subRow).get(1)), children:detailCollection });
 							subCollection = subCollection.add(subRow);
 						}
 						new TriStateCheckBox({ box:$($('TD', secRow).get(0)), children:subCollection });

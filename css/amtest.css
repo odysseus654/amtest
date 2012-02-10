@@ -1,6 +1,7 @@
 TABLE.sec-choice
 {
 	font: 12pt Arial,sans-serif;
+	text-align: left;
 }
 
 TABLE.sec-choice TR.section
@@ -19,10 +20,24 @@ TABLE.sec-choice TR.subsection TD.descr
 	vertical-align: top;
 }
 
+TABLE.sec-choice TR.questsection SPAN.question
+{
+	display: inline-block;
+	font-size: 10pt;
+	width: 100px;
+	vertical-align: top;
+	margin-bottom: 5px;
+}
+
+TABLE.sec-choice TR.questsection SPAN.question SPAN.tristate
+{
+	margin-right: 5px;
+}
+
 TABLE.sec-choice SPAN.expander
 {
-	width: 16;
-	height: 16;
+	width: 16px;
+	height: 16px;
 	background-image: url(expand-yes.png);
 	display: inline-block;
 }
