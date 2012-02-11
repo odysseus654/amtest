@@ -42,9 +42,19 @@ TABLE.sec-choice TR.subsection SPAN.qcount
 
 TABLE.sec-choice TR.questsection SPAN.question
 {
-	display: inline-block;
 	font-size: 10pt;
 	width: 100px;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 5px;
+}
+
+DIV.test-results SPAN.question
+{
+	font: 12pt Arial,sans-serif;
+	font-weight: bold;
+	display: inline-block;
+	width: 150px;
 	vertical-align: top;
 	margin-bottom: 5px;
 }
@@ -188,6 +198,7 @@ DIV.progBox
 	margin-right: auto;
 	text-align: left;
 	font: 12pt Arial,sans-serif;
+	clear: both;
 }
 
 TABLE.progress

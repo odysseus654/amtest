@@ -23,16 +23,6 @@
 	<script type="text/javascript" src="lib/tristate.js"></script>
 	<script type="text/javascript" src="lib/questions.js"></script>
 	<script type="text/javascript">
-		function qsorter(a,b)
-		{
-			if((a.name.substring(1, 2) == '0') == (b.name.substring(1, 2) == '0'))
-			{
-				return a.name < b.name ? -1 : a.name > b.name ? +1 : 0;
-			} else {
-				return a.name.substring(1, 2) == '0' ? +1 : -1;
-			}
-		}
-		
 		function onExpandSection(secId, suppressSection)
 		{
 			var targets = $('TABLE.sec-choice TR.subof-'+secId);
