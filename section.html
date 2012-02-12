@@ -32,7 +32,7 @@
 					fixupQuestions(data);
 					var qlBase = $('<div/>',{'class':'main-body'})
 						.appendTo(document.body);
-					showCategories(qlBase, data);
+					(new CategoryList(qlBase, data)).showCategories();
 				}
 			});
 		});
