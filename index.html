@@ -18,6 +18,7 @@
  *-->
 <html><head>
 	<link rel="stylesheet" type="text/css" href="css/amtest.css" />
+	<link rel="stylesheet" type="text/css" href="css/tristate.css" />
 	<script type="text/javascript" src="lib/jquery.js"></script>
 	<script type="text/javascript" src="lib/raphael-min.js"></script>
 	<script type="text/javascript" src="lib/scale_raphael.js"></script>
@@ -33,14 +34,24 @@
 					fixupQuestions(data);
 					var qlBase = $('<div/>',{'class':'main-body'})
 						.appendTo(document.body);
-
-					var list = [];
-					for(var id in data.questions)
-					{
-						var quest = data.questions[id];
-						list.push(quest);
-					}
-					(new QuestionList(qlBase, list)).showQuestion();
+					var catlist = new CategoryList(qlBase, data);
+					catlist.showCategories();
+					qlBase.prepend($('<button/>')
+						.css({float:'right'})
+						.text('Begin Test')
+						.on('click',function()
+							{
+								qlBase.empty();
+								var list = [];
+								for(var id in catlist.questionState)
+								{
+									if(catlist.questionState[id])
+									{
+										list.push(data.questions[id]);
+									}
+								}
+								(new QuestionList(qlBase, list)).showQuestion();
+							}));
 				}
 			});
 		});
