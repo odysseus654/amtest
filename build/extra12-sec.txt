@@ -1,6 +1,6 @@
 2012-2016 ELEMENT 4 EXTRA CLASS QUESTION POOL
-Effective July 1, 2012 - June 30, 2016 
- as modified January 30, 2012
+Effective July 1, 2012 to June 30, 2016 
+January 31, 2012
 
 SYLLABUS
 
@@ -111,7 +111,7 @@ E8C Digital signals: digital communications modes; CW; information rate vs. band
 E8D Waves, measurements, and RF grounding: peak-to-peak values, polarization; RF grounding
 
 
-SUBELEMENT E9 - ANTENNAS AND FEEDLINES [8 Exam Questions - 8 Groups]
+SUBELEMENT E9 - ANTENNAS AND TRANSMISSION LINES [8 Exam Questions - 8 Groups]
 
 E9A Isotropic and gain antennas: definition; used as a standard for comparison; radiation pattern; basic antenna parameters: radiation resistance and reactance, gain, beamwidth, efficiency
 
@@ -129,5 +129,5 @@ E9G The Smith chart
 
 E9H Effective radiated power; system gains and losses; radio direction finding antennas
 
-SUBELEMENT E0 - SAFETY - [1 exam question - 1 group]
+SUBELEMENT E0 - SAFETY - [1 exam question -- 1 group]
 E0A Safety: amateur radio safety practices; RF radiation hazards; hazardous materials

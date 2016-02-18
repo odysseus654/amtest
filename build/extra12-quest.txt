@@ -432,7 +432,7 @@ What should a VE do if a candidate fails to comply with the examiner's instructi
 A. Warn the candidate that continued failure to comply will result in termination of the examination
 B. Immediately terminate the candidate's examination
 C. Allow the candidate to complete the examination, but invalidate the results
-D. Immediately terminate everyones examination and close the session
+D. Immediately terminate everyone's examination and close the session
 ~~
 
 E1E08 (C) [97.509]
@@ -714,7 +714,6 @@ B. Geostationary
 C. Geomagnetic
 D. LEO
 ~~
-
 
 
 E2B Television practices: fast scan television standards and techniques; slow scan television standards and techniques 
@@ -1056,7 +1055,7 @@ D. All of these choices are correct
 ~~
 
 E2D11 (D)
-Which of the following data are used by the APRS network to communicate your location?
+Which of the following data are used by the APRS network communicate your location?
 A. Polar coordinates
 B. Time and frequency
 C. Radio direction finding LOPs
@@ -1540,13 +1539,10 @@ D. All of these choices are correct
 
 E4A10 (D)
 Which of the following tests establishes that a silicon NPN junction transistor is biased on?
-A. Measure base-to-emitter resistance with an ohmmeter; it should be approximately
-6 to 7 ohms
+A. Measure base-to-emitter resistance with an ohmmeter; it should be approximately 6 to 7 ohms
 B. Measure base-to-emitter resistance with an ohmmeter; it should be approximately 0.6 to 0.7 ohms
-C. Measure base-to-emitter voltage with a voltmeter; it should be approximately 
-6 to 7 volts
-D. Measure base-to-emitter voltage with a voltmeter; it should be approximately
-0.6 to 0.7 volts
+C. Measure base-to-emitter voltage with a voltmeter; it should be approximately 6 to 7 volts
+D. Measure base-to-emitter voltage with a voltmeter; it should be approximately 0.6 to 0.7 volts
 ~~
 
 E4A11 (B)
@@ -1820,7 +1816,7 @@ E4D Receiver performance characteristics: blocking dynamic range; intermodulatio
 
 E4D01 (A)
 What is meant by the blocking dynamic range of a receiver?
-A. The difference in dB between the noise floor and thelevel of an incoming signal which will cause 1 dB of gain compression
+A. The difference in dB between the noise floor and the level of an incoming signal which will cause 1 dB of gain compression
 B. The minimum difference in dB between the levels of two FM signals which will cause one signal to block the other
 C. The difference in dB between the noise floor and the third order intercept point
 D. The minimum difference in dB between two signals which produce third order intermodulation products greater than the noise floor
@@ -2426,10 +2422,10 @@ D. 141 ohms at an angle of 45 degrees
 
 E5C17 (C)
 In rectangular coordinates, what is the impedance of a circuit that has an admittance of 5 millisiemens at -30 degrees?
-A. 173 - j100 ohms
-B. 200 + j100 ohms
-C. 173 + j100 ohms
-D. 200 - j100 ohms
+A. 173 -j100 ohms
+B. 200 +j100 ohms
+C. 173 +j100 ohms
+D. 200 -j100 ohms
 ~~
 
 E5C18 (B)
@@ -3163,7 +3159,7 @@ D. Controlled gain, low noise figure, and constant input and output impedance ov
 ~~
 
 E6E07 (B)
-Which of the following techniques is typically used to construct a MMIC-based microwave amplifier?
+Which of the following is typically used to construct a MMIC-based microwave amplifier?
 A. Ground-plane construction
 B. Microstrip construction
 C. Point-to-point construction
@@ -3295,10 +3291,10 @@ D. Copper oxide
 ~~
 
 E6F11 (B)
-Which of the following is the approximate open-circuit voltage produced by a fully-illuminated silicon?photovoltaic cell?
+Which of the following is the approximate open-circuit voltage produced by a fully-illuminated silicon photovoltaic cell?
 A. 0.1 V
 B. 0.5 V
-C. 1.5?V
+C. 1.5 V
 D. 12 V
 ~~
 
@@ -3386,8 +3382,8 @@ E7A09 (C)
 What logical operation is performed by a two-input exclusive NOR gate?
 A. It produces a logic "0" at its output only if all inputs are logic "0"
 B. It produces a logic "1" at its output only if all inputs are logic "1"
-C. It produces a logic "0" at its output if any single input is a logic "1"?
-D. It produces a logic "1" at its output if any single input is a logic "1"?
+C. It produces a logic "0" at its output if any single input is a logic "1"
+D. It produces a logic "1" at its output if any single input is a logic "1"
 ~~
 
 E7A10 (C)
@@ -3711,7 +3707,7 @@ D. A matching network in which all components are isolated from ground
 E7C13 (A)
 What is one advantage of a Pi matching network over an L matching network consisting of a single inductor and a single capacitor?
 A. The Q of Pi networks can be varied depending on the component values chosen
-B. L networks cannot perform impedance transformation
+B. L networks can not perform impedance transformation
 C. Pi networks have fewer components 
 D. Pi networks are designed for balanced input and output
 ~~
@@ -4019,7 +4015,7 @@ A. Use a GPS signal reference
 B. Use a rubidium stabilized reference oscillator
 C. Use a temperature-controlled high Q dielectric resonator
 D. All of these choices are correct
-
+~~
 
 E7F06 (C)
 What is one purpose of a marker generator?
@@ -4170,8 +4166,8 @@ D. An RF amplifier used in the UHF and microwave regions
 E7G13 (C)
 What is meant by the term op-amp input-offset voltage?
 A. The output voltage of the op-amp minus its input voltage
-B. The differential input voltage needed to bring the open-loop output voltage to zero
-C. The input voltage needed to bring the open-loop output voltage to zero
+B. The difference between the output voltage of the op-amp and the input voltage required in the immediately following stage
+C. The differential input voltage needed to bring the open-loop output voltage to zero
 D. The potential between the amplifier input terminals of the op-amp in an open-loop condition
 ~~ 
 
@@ -5022,7 +5018,7 @@ A. The region of the ionosphere where radiated power is not refracted
 B. The region where radiated power dissipates over a specified time period
 C. The region where radiated field strengths are obstructed by objects of reflection
 D. The region where the shape of the antenna pattern is independent of distance
-
+~~
 
 E9B13 (B)
 What does the abbreviation NEC stand for when applied to antenna modeling programs?
@@ -5288,7 +5284,7 @@ D. The stub match
 ~~
 
 E9E03 (D)
-What is the name of the matching system that uses a section of transmission line connected in parallel with the feed line at the feed point?
+What is the name of the matching system that uses a section of transmission line connected in parallel with the feed line at or near the feed point?
 A. The gamma match
 B. The delta match
 C. The omega match
@@ -5312,8 +5308,7 @@ D. The driven element radiation resistance must be higher than the characteristi
 ~~
 
 E9E06 (C)
-What is the equivalent lumped-constant network for a hairpin matching system on a 
-3-element Yagi?
+What is the equivalent lumped-constant network for a hairpin matching system on a 3-element Yagi?
 A. Pi network
 B. Pi-L network
 C. L network
@@ -5355,7 +5350,7 @@ D. Connect 1/2 wavelength shorted stub of 75-ohm cable in parallel with the 50-o
 E9E11 (B)
 What is an effective way of matching a feed line to a VHF or UHF antenna when the impedances of both the antenna and feed line are unknown?
 A. Use a 50-ohm 1:1 balun between the antenna and feed line
-B. Use the "universal stub" matching technique
+B. Use the universal stub matching technique
 C. Connect a series-resonant LC network across the antenna feed terminals
 D. Connect a parallel-resonant LC network across the antenna feed terminals
 ~~  
@@ -5698,7 +5693,7 @@ D. It allows stations to communicate without giving away their position
 ~~
 
 
-SUBELEMENT E0 - SAFETY - [1 exam question -? 1 group]
+SUBELEMENT E0 - SAFETY - [1 exam question -- 1 group]
 
 E0A Safety: amateur radio safety practices; RF radiation hazards; hazardous materials 
 
